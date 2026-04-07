@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>জেলা.পাতা.বাংলা — বাংলাদেশের সকল ৬৪ জেলা</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- ======= ADS.JS — MKX / BANNER / POPUNDER / SMARTLINK ======= -->
+<script src="ads.js"></script>
+<!-- Popunder / Smartlink container (ads.js handles render) -->
+<div id="ad-popunder" data-ad-type="popunder" style="display:none"></div>
+<div id="ad-smartlink" data-ad-type="smartlink" style="display:none"></div>
+
+<style>
+/* ===== স্বাধীনতা ২.০ মাত্রা ফন্ট (Google Fonts Noto Serif Bengali — closest available) ===== */
+:root{
+  --font-display:'Noto Serif Bengali','Hind Siliguri',serif;
+  --font-body:'Hind Siliguri',sans-serif;
+  --green:#0b5c2e; --green2:#168040; --green3:#1fa04e;
+  --green-pale:#e5f5ec; --green-dark:#083d1e;
+  --gold:#d4a017; --gold2:#f5c842;
+  --text:#181818; --muted:#4e6358;
+  --bg:#f2f7f4; --white:#fff; --border:#cce0d4;
+  --sh:0 2px 18px rgba(11,92,46,0.10);
+  --sh2:0 8px 32px rgba(11,92,46,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;}
+
+/* ── HEADER ── */
+header{
+  background:linear-gradient(100deg,var(--green-dark) 0%,var(--green) 55%,var(--green2) 100%);
+  position:sticky;top:0;z-index:300;
+  box-shadow:0 3px 20px rgba(0,0,0,0.28);
+}
+.hdr{max-width:1300px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:14px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;}
+.flag{width:48px;height:32px;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.4);}
+.logo-text{font-family:var(--font-display);font-size:1.42rem;font-weight:700;color:#fff;line-height:1.15;}
+.logo-sub{font-size:.66rem;color:rgba(255,255,255,.68);display:block;}
+.srch{
+  flex:1;max-width:360px;margin-left:auto;
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.13);border:1.5px solid rgba(255,255,255,.25);
+  border-radius:28px;padding:7px 18px;
+}
+.srch input{background:none;border:none;outline:none;color:#fff;font-family:var(--font-body);font-size:.95rem;width:100%;}
+.srch input::placeholder{color:rgba(255,255,255,.5);}
+
+/* ── AD LEADERBOARD TOP ── */
+.ad-leader{background:#fff;border-bottom:1px solid var(--border);text-align:center;padding:8px 10px;min-height:62px;overflow:hidden;}
+.ad-lbl{font-size:.62rem;color:#c0c0c0;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 45%,var(--green2) 100%);
+  color:#fff;text-align:center;padding:54px 20px 46px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-glow{position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:700px;height:300px;background:radial-gradient(ellipse,rgba(212,160,23,.18) 0%,transparent 70%);}
+.htitle{font-family:var(--font-display);font-size:clamp(1.95rem,4.5vw,3.3rem);font-weight:700;position:relative;margin-bottom:10px;text-shadow:0 2px 14px rgba(0,0,0,.3);}
+.hsub{font-size:clamp(.88rem,1.8vw,1.05rem);color:rgba(255,255,255,.82);position:relative;max-width:580px;margin:0 auto 28px;line-height:1.68;}
+.hstats{display:flex;justify-content:center;gap:38px;position:relative;flex-wrap:wrap;}
+.hstat-n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--gold2);display:block;}
+.hstat-l{font-size:.76rem;color:rgba(255,255,255,.7);}
+
+/* ── FILTER BAR ── */
+.fbar{background:#fff;border-bottom:1px solid var(--border);overflow-x:auto;white-space:nowrap;scrollbar-width:none;}
+.fbar::-webkit-scrollbar{display:none;}
+.finner{max-width:1300px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;}
+.fb{padding:7px 18px;border-radius:22px;border:1.5px solid var(--border);background:none;cursor:pointer;font-family:var(--font-body);font-size:.86rem;color:var(--muted);transition:all .17s;white-space:nowrap;flex-shrink:0;}
+.fb:hover{border-color:var(--green);color:var(--green);}
+.fb.on{background:var(--green);border-color:var(--green);color:#fff;}
+
+/* ── MAIN ── */
+main{max-width:1300px;margin:0 auto;padding:26px 20px 60px;}
+.stitle{font-family:var(--font-display);font-size:1.16rem;color:var(--green);font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.stitle::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── AD MID RECTANGLE ── */
+.ad-rect{background:#fff;border:1px solid var(--border);border-radius:10px;text-align:center;padding:10px;margin:0 0 24px;min-height:100px;overflow:hidden;}
+
+/* ── GRID ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:20px;}
+.card{background:#fff;border-radius:12px;border:1px solid var(--border);box-shadow:var(--sh);cursor:pointer;transition:transform .22s,box-shadow .22s;text-decoration:none;color:inherit;display:block;overflow:hidden;}
+.card:hover{transform:translateY(-5px);box-shadow:var(--sh2);border-color:var(--green2);}
+.cimg{position:relative;height:165px;background:linear-gradient(135deg,#cce8d8,#a8d8bc);overflow:hidden;}
+.cimg img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.card:hover .cimg img{transform:scale(1.07);}
+.cfb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.2rem;background:linear-gradient(135deg,#e5f5ec,#c2e8d0);}
+.dbadge{position:absolute;top:8px;right:8px;background:rgba(11,92,46,.85);color:#fff;font-size:.67rem;padding:3px 10px;border-radius:12px;backdrop-filter:blur(6px);}
+.cbody{padding:14px 16px 16px;}
+.cname{font-family:var(--font-display);font-size:1.12rem;font-weight:700;color:var(--green);margin-bottom:5px;}
+.cdesc{font-size:.81rem;color:var(--muted);line-height:1.58;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.cfoot{margin-top:10px;padding-top:10px;border-top:1px solid var(--green-pale);display:flex;align-items:center;justify-content:space-between;}
+.clink{font-size:.79rem;color:var(--green);font-weight:600;}
+.no-res{text-align:center;padding:60px 20px;color:var(--muted);display:none;}
+
+/* ── AD SIDEBAR (if needed) ── */
+.ad-inline{background:#fff;border:1px solid var(--border);border-radius:10px;text-align:center;padding:10px;margin:28px 0 0;min-height:90px;overflow:hidden;}
+
+/* ── FOOTER ── */
+footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:rgba(255,255,255,.78);text-align:center;padding:28px 20px;font-size:.84rem;}
+.flogo{font-family:var(--font-display);color:#fff;font-size:1.18rem;display:block;margin-bottom:5px;}
+.foot-ad{margin:14px auto;max-width:728px;min-height:60px;overflow:hidden;}
+
+@media(max-width:600px){
+  .hero{padding:36px 16px 30px;}
+  .hstats{gap:20px;}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px;}
+  .cimg{height:112px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">
+      <svg class="flag" viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="450" height="300" fill="#006a4e"/>
+        <circle cx="220" cy="150" r="100" fill="#f42a41"/>
+      </svg>
+      <div>
+        <div class="logo-text">জেলা.পাতা.বাংলা</div>
+        <span class="logo-sub">বাংলাদেশের ৬৪ জেলার তথ্যভান্ডার</span>
+      </div>
+    </a>
+    <div class="srch">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="si" placeholder="জেলা খুঁজুন...">
+    </div>
+  </div>
+</header>
+
+<!-- AD: MKX / Banner Leaderboard (728x90) -->
+<div class="ad-leader">
+  <span class="ad-lbl">বিজ্ঞাপন</span>
+  <div id="ad-banner-top" data-ad-slot="leaderboard-top" data-ad-size="728x90" data-ad-type="banner"></div>
+</div>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <h1 class="htitle">🗺️ বাংলাদেশের সকল জেলা</h1>
+  <p class="hsub">ইতিহাস, ঐতিহ্য, দর্শনীয় স্থান, বিখ্যাত খাবার ও বিখ্যাত ব্যক্তিত্বসহ প্রতিটি জেলার পূর্ণাঙ্গ বাংলা পরিচয়</p>
+  <div class="hstats">
+    <div><span class="hstat-n">৬৪</span><span class="hstat-l">জেলা</span></div>
+    <div><span class="hstat-n">৮</span><span class="hstat-l">বিভাগ</span></div>
+    <div><span class="hstat-n">৪৯৫</span><span class="hstat-l">উপজেলা</span></div>
+    <div><span class="hstat-n">১৬ কোটি+</span><span class="hstat-l">জনসংখ্যা</span></div>
+  </div>
+</section>
+
+<div class="fbar">
+  <div class="finner">
+    <button class="fb on" data-d="সব">সব জেলা</button>
+    <button class="fb" data-d="ঢাকা">ঢাকা বিভাগ</button>
+    <button class="fb" data-d="চট্টগ্রাম">চট্টগ্রাম বিভাগ</button>
+    <button class="fb" data-d="রাজশাহী">রাজশাহী বিভাগ</button>
+    <button class="fb" data-d="খুলনা">খুলনা বিভাগ</button>
+    <button class="fb" data-d="বরিশাল">বরিশাল বিভাগ</button>
+    <button class="fb" data-d="সিলেট">সিলেট বিভাগ</button>
+    <button class="fb" data-d="রংপুর">রংপুর বিভাগ</button>
+    <button class="fb" data-d="ময়মনসিংহ">ময়মনসিংহ বিভাগ</button>
+  </div>
+</div>
+
+<main>
+  <div class="stitle" id="stitle">সকল ৬৪টি জেলা</div>
+
+  <!-- AD: MKX Rectangle (300x250) -->
+  <div class="ad-rect">
+    <span class="ad-lbl">বিজ্ঞাপন</span>
+    <div id="ad-banner-mid" data-ad-slot="rectangle-mid" data-ad-size="300x250" data-ad-type="mkx"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="no-res" id="nr">
+    <div style="font-size:2.8rem;margin-bottom:12px">🔍</div>
+    <p>কোনো জেলা পাওয়া যায়নি</p>
+  </div>
+
+  <!-- AD: Inline Banner after grid -->
+  <div class="ad-inline">
+    <span class="ad-lbl">বিজ্ঞাপন</span>
+    <div id="ad-banner-inline" data-ad-slot="inline-banner" data-ad-size="728x90" data-ad-type="banner"></div>
+  </div>
+</main>
+
+<footer>
+  <span class="flogo">জেলা.পাতা.বাংলা</span>
+  <p>বাংলাদেশের ৬৪ জেলার সম্পূর্ণ তথ্যভান্ডার · সকল তথ্য বাংলায়</p>
+  <div class="foot-ad">
+    <span class="ad-lbl">বিজ্ঞাপন</span>
+    <div id="ad-banner-footer" data-ad-slot="footer-leaderboard" data-ad-size="728x90" data-ad-type="banner"></div>
+  </div>
+  <p style="margin-top:10px;font-size:.76rem;color:rgba(255,255,255,.45)">© ২০২৫ জেলা.পাতা.বাংলা · সর্বস্বত্ব সংরক্ষিত</p>
+</footer>
+
+<script>
+/* ============================================================
+   ৬৪ জেলার ডেটা — Wikipedia ছবি সহ
+   ============================================================ */
+const W = "https://upload.wikimedia.org/wikipedia/commons/thumb/";
+const D = [
+  /* ── ঢাকা বিভাগ ── */
+  {id:"dhaka",n:"ঢাকা",d:"ঢাকা",e:"🏙️",s:"বাংলাদেশের রাজধানী ও সর্ববৃহৎ মহানগরী। মুঘল স্থাপত্য, আধুনিক বাণিজ্য, শিক্ষা ও সংস্কৃতির প্রাণকেন্দ্র।",img:W+"a/a8/Dhaka_collage.jpg/400px-Dhaka_collage.jpg"},
+  {id:"gazipur",n:"গাজীপুর",d:"ঢাকা",e:"🏭",s:"শিল্পনগরী গাজীপুর। বঙ্গবন্ধু সাফারি পার্ক, ভাওয়াল জাতীয় উদ্যান ও বিশাল পোশাক শিল্পাঞ্চলের জেলা।",img:W+"2/2a/Bhawal_National_Park.jpg/400px-Bhawal_National_Park.jpg"},
+  {id:"narayanganj",n:"নারায়ণগঞ্জ",d:"ঢাকা",e:"⚓",s:"প্রাচীন বন্দরনগরী। শীতলক্ষ্যার তীরে পাট ও পোশাক শিল্পের কেন্দ্র। সোনারগাঁও লোকশিল্প জাদুঘর বিখ্যাত।",img:W+"7/7a/Sonargaon_Bangladesh.jpg/400px-Sonargaon_Bangladesh.jpg"},
+  {id:"munshiganj",n:"মুন্সীগঞ্জ",d:"ঢাকা",e:"🏛️",s:"প্রাচীন বিক্রমপুরের ভূমি। পদ্মা সেতুর পূর্বপ্রান্ত। ইদ্রাকপুর কেল্লা ও আলু-কলার জেলা।",img:W+"d/d4/Padma_Bridge_opening.jpg/400px-Padma_Bridge_opening.jpg"},
+  {id:"narsingdi",n:"নরসিংদী",d:"ঢাকা",e:"🧵",s:"তাঁতশিল্পের জেলা। উয়ারী-বটেশ্বরে ২৫০০ বছরের পুরনো সভ্যতার নিদর্শন আবিষ্কৃত।",img:W+"9/97/Wari-Bateshwar.jpg/400px-Wari-Bateshwar.jpg"},
+  {id:"manikganj",n:"মানিকগঞ্জ",d:"ঢাকা",e:"🌊",s:"পদ্মা-যমুনার কোলে নদীমাতৃক জেলা। বালিয়াটি জমিদারবাড়ি ও নৌকাবাইচের জন্য বিখ্যাত।",img:W+"c/c9/Baliati_Palace_Manikganj.jpg/400px-Baliati_Palace_Manikganj.jpg"},
+  {id:"rajbari",n:"রাজবাড়ী",d:"ঢাকা",e:"🐟",s:"পদ্মার তীরে ইলিশের জেলা। চিনিকল ও পাটশিল্পের ঐতিহ্য বহন করে।",img:W+"b/b1/Hilsa_fish_Bangladesh.jpg/400px-Hilsa_fish_Bangladesh.jpg"},
+  {id:"faridpur",n:"ফরিদপুর",d:"ঢাকা",e:"🌾",s:"পদ্মার কোলে ঐতিহাসিক জেলা। খেজুরের গুড়, পাটশিল্প ও মুক্তিযুদ্ধের গৌরবময় জেলা।",img:W+"6/6a/Faridpur_district.jpg/400px-Faridpur_district.jpg"},
+  {id:"gopalganj",n:"গোপালগঞ্জ",d:"ঢাকা",e:"🏡",s:"জাতির পিতা বঙ্গবন্ধুর জন্মভূমি টুঙ্গিপাড়া এই জেলায়। মধুমতি নদীবেষ্টিত সবুজ জেলা।",img:W+"3/3d/Tungipara_-_Bangabandhu%27s_Mausoleum.jpg/400px-Tungipara_-_Bangabandhu%27s_Mausoleum.jpg"},
+  {id:"madaripur",n:"মাদারীপুর",d:"ঢাকা",e:"🌴",s:"পদ্মার শাখানদী বিধৌত জেলা। খেজুর রস, নৌকা তৈরি ও কুটিরশিল্পের ঐতিহ্য।",img:W+"5/5c/Padma_river_Bangladesh.jpg/400px-Padma_river_Bangladesh.jpg"},
+  {id:"shariatpur",n:"শরীয়তপুর",d:"ঢাকা",e:"⛵",s:"পদ্মা-মেঘনার সংগমে অবস্থিত। পদ্মা সেতু এই জেলার উন্নয়নে নতুন দিগন্ত উন্মোচন করেছে।",img:W+"d/d4/Padma_Bridge_opening.jpg/400px-Padma_Bridge_opening.jpg"},
+  {id:"kishoreganj",n:"কিশোরগঞ্জ",d:"ঢাকা",e:"💧",s:"হাওরের জেলা। বর্ষায় অষ্টগ্রাম-ইটনা-মিঠামইন হাওর হয়ে ওঠে অথৈ নীল জলের দেশ।",img:W+"a/a6/Haor_Bangladesh.jpg/400px-Haor_Bangladesh.jpg"},
+  {id:"tangail",n:"টাঙ্গাইল",d:"ঢাকা",e:"🧶",s:"বিশ্বখ্যাত টাঙ্গাইল শাড়ির জেলা। মধুপুর গড়, যমুনা সেতু ও আতিয়া মসজিদ বিখ্যাত।",img:W+"e/e8/Tangail_saree.jpg/400px-Tangail_saree.jpg"},
+
+  /* ── চট্টগ্রাম বিভাগ ── */
+  {id:"chittagong",n:"চট্টগ্রাম",d:"চট্টগ্রাম",e:"⚓",s:"বাণিজ্যিক রাজধানী। প্রধান সমুদ্রবন্দর, পাহাড় ও সমুদ্রের অপূর্ব সমন্বয়ের বীরের শহর।",img:W+"8/84/Chittagong_collage.jpg/400px-Chittagong_collage.jpg"},
+  {id:"coxsbazar",n:"কক্সবাজার",d:"চট্টগ্রাম",e:"🏖️",s:"বিশ্বের দীর্ঘতম ১২০ কিমি সমুদ্রসৈকত। সেন্টমার্টিন, ইনানী ও হিমছড়ির অপরূপ সৌন্দর্যের জেলা।",img:W+"6/62/Cox%27s_Bazar_sea_beach.jpg/400px-Cox%27s_Bazar_sea_beach.jpg"},
+  {id:"rangamati",n:"রাঙ্গামাটি",d:"চট্টগ্রাম",e:"⛰️",s:"কাপ্তাই লেক ও পার্বত্য প্রকৃতির জেলা। সাজেক ভ্যালি ও বৈচিত্র্যময় উপজাতীয় সংস্কৃতির মেলবন্ধন।",img:W+"5/5c/Kaptai_lake.jpg/400px-Kaptai_lake.jpg"},
+  {id:"khagrachhari",n:"খাগড়াছড়ি",d:"চট্টগ্রাম",e:"🌿",s:"আলুটিলা রহস্যময় গুহা ও রিছাং ঝরনার জেলা। পাহাড়ি পথ ও উপজাতীয় সংস্কৃতির মিলনস্থল।",img:W+"a/a2/Riching_waterfall_Khagrachhari.jpg/400px-Riching_waterfall_Khagrachhari.jpg"},
+  {id:"bandarban",n:"বান্দরবান",d:"চট্টগ্রাম",e:"🏔️",s:"বাংলাদেশের সর্বোচ্চ পর্বত তাজিন্ডং ও বগালেকের জেলা। মেঘছোঁয়া নীলগিরির পাহাড়ের রাজ্য।",img:W+"5/5e/Bandarban_Bangladesh.jpg/400px-Bandarban_Bangladesh.jpg"},
+  {id:"feni",n:"ফেনী",d:"চট্টগ্রাম",e:"🌳",s:"মুক্তিযুদ্ধের ঐতিহাসিক রণাঙ্গন। মুহুরী সেচ প্রকল্প ও বিলোনিয়া যুদ্ধের স্মৃতির জেলা।",img:W+"9/9c/Feni_district_Bangladesh.jpg/400px-Feni_district_Bangladesh.jpg"},
+  {id:"noakhali",n:"নোয়াখালী",d:"চট্টগ্রাম",e:"🌊",s:"মেঘনা মোহনার জেলা। মহাত্মা গান্ধীর অহিংস আন্দোলনের স্মৃতি ও নিঝুম দ্বীপের অপরূপ প্রকৃতি।",img:W+"c/cd/Nijhum_Dwip_Noakhali.jpg/400px-Nijhum_Dwip_Noakhali.jpg"},
+  {id:"lakshmipur",n:"লক্ষ্মীপুর",d:"চট্টগ্রাম",e:"🐟",s:"মেঘনার তীরের জেলা। ইলিশ শিকার, চিংড়ি চাষ ও সামুদ্রিক বাণিজ্যের কেন্দ্র।",img:W+"4/4e/Meghna_River_Bangladesh.jpg/400px-Meghna_River_Bangladesh.jpg"},
+  {id:"comilla",n:"কুমিল্লা",d:"চট্টগ্রাম",e:"🍮",s:"রসমালাই ও খাদির শহর। শালবন বৌদ্ধবিহার, লালমাই পাহাড় ও ময়নামতি প্রত্নস্থল বিখ্যাত।",img:W+"b/b6/Shalbon_Bihar_Comilla.jpg/400px-Shalbon_Bihar_Comilla.jpg"},
+  {id:"chandpur",n:"চাঁদপুর",d:"চট্টগ্রাম",e:"🐡",s:"ইলিশের রাজধানী। পদ্মা, মেঘনা ও ডাকাতিয়া নদীর মিলনস্থলে অবস্থিত ত্রিনদীর জেলা।",img:W+"b/bc/Chandpur_district.jpg/400px-Chandpur_district.jpg"},
+  {id:"brahmanbaria",n:"ব্রাহ্মণবাড়িয়া",d:"চট্টগ্রাম",e:"🎵",s:"সাংস্কৃতিক রাজধানী। ওস্তাদ আলাউদ্দিন খাঁ ও কবি আল মাহমুদের জন্মভূমির জেলা।",img:W+"5/5a/Brahmanbaria_district.jpg/400px-Brahmanbaria_district.jpg"},
+
+  /* ── রাজশাহী বিভাগ ── */
+  {id:"rajshahi",n:"রাজশাহী",d:"রাজশাহী",e:"🍈",s:"আমের রাজধানী ও রেশমের শহর। পদ্মার তীরে পরিষ্কার শহর। বরেন্দ্র গবেষণা জাদুঘর বিখ্যাত।",img:W+"8/84/Rajshahi_Collage.jpg/400px-Rajshahi_Collage.jpg"},
+  {id:"chapainawabganj",n:"চাঁপাইনবাবগঞ্জ",d:"রাজশাহী",e:"🥭",s:"ফজলি, গোপালভোগ, ক্ষীরসাপাতিসহ দেশের সেরা আমের জেলা। সোনামসজিদ স্থলবন্দর।",img:W+"5/5f/Mango_orchard_Rajshahi.jpg/400px-Mango_orchard_Rajshahi.jpg"},
+  {id:"naogaon",n:"নওগাঁ",d:"রাজশাহী",e:"🏯",s:"পাহাড়পুর বৌদ্ধবিহারের জেলা। ইউনেস্কো স্বীকৃত সোমপুর মহাবিহার দক্ষিণ এশিয়ার বৃহত্তম বৌদ্ধ মঠ।",img:W+"1/19/Somapura_Mahavihara.jpg/400px-Somapura_Mahavihara.jpg"},
+  {id:"natore",n:"নাটোর",d:"রাজশাহী",e:"🦢",s:"উত্তরা গণভবন ও চলনবিলের জেলা। কাঁচাগোল্লা মিষ্টির জন্য সারাদেশে বিখ্যাত।",img:W+"c/c3/Uttara_Ganabhaban_Natore.jpg/400px-Uttara_Ganabhaban_Natore.jpg"},
+  {id:"sirajganj",n:"সিরাজগঞ্জ",d:"রাজশাহী",e:"🧵",s:"যমুনার তীরে তাঁত শিল্পের জেলা। বঙ্গবন্ধু সেতুর পূর্বপ্রান্ত এই জেলায়।",img:W+"3/31/Bangabandhu_Bridge_Bangladesh.jpg/400px-Bangabandhu_Bridge_Bangladesh.jpg"},
+  {id:"pabna",n:"পাবনা",d:"রাজশাহী",e:"🐄",s:"দুধ ও পনিরের জেলা। শাহজাদপুরে বিশ্বকবি রবীন্দ্রনাথের কুঠিবাড়ি পর্যটকদের আকর্ষণ।",img:W+"9/9e/Shilaidaha_Kuthibari_Pabna.jpg/400px-Shilaidaha_Kuthibari_Pabna.jpg"},
+  {id:"bogura",n:"বগুড়া",d:"রাজশাহী",e:"🏛️",s:"মহাস্থানগড়ের জেলা। বাংলাদেশের প্রাচীনতম নগর সভ্যতা ও বিশ্বখ্যাত দইয়ের শহর।",img:W+"2/2a/Mahasthangarh.jpg/400px-Mahasthangarh.jpg"},
+  {id:"joypurhat",n:"জয়পুরহাট",d:"রাজশাহী",e:"⛏️",s:"খনিজ সম্পদ ও চিনিকলের জেলা। পাথর শিল্প ও হিলি স্থলবন্দরের কারণে বাণিজ্যিক গুরুত্ব।",img:W+"f/f9/Joypurhat_district.jpg/400px-Joypurhat_district.jpg"},
+
+  /* ── খুলনা বিভাগ ── */
+  {id:"khulna",n:"খুলনা",d:"খুলনা",e:"🐯",s:"সুন্দরবনের প্রবেশদ্বার। তৃতীয় বৃহত্তম শহর ও চিংড়ি শিল্পের কেন্দ্র। রয়েল বেঙ্গল টাইগারের জেলা।",img:W+"9/96/Sundarbans_Mangrove_forest.jpg/400px-Sundarbans_Mangrove_forest.jpg"},
+  {id:"bagerhat",n:"বাগেরহাট",d:"খুলনা",e:"🕌",s:"ষাটগম্বুজ মসজিদের জেলা। ইউনেস্কো বিশ্ব ঐতিহ্যবাহী স্থান। খান জাহান আলীর ঐতিহাসিক নগর।",img:W+"c/c2/Shait_Gambuj_Mosque%2C_Bagerhat.jpg/400px-Shait_Gambuj_Mosque%2C_Bagerhat.jpg"},
+  {id:"satkhira",n:"সাতক্ষীরা",d:"খুলনা",e:"🦀",s:"সুন্দরবনের একাংশ ও চিংড়ি চাষের জেলা। ভোমরা স্থলবন্দরে ভারতের সাথে বাণিজ্য।",img:W+"6/6f/Sundarbans_Tiger.jpg/400px-Sundarbans_Tiger.jpg"},
+  {id:"jessore",n:"যশোর",d:"খুলনা",e:"🌸",s:"ফুলের রাজধানী। গদখালী থেকে সারাদেশে ফুল সরবরাহ হয়। বাংলাদেশের প্রথম মুক্ত শহর।",img:W+"d/d8/Gadkhali_flower_market_Jessore.jpg/400px-Gadkhali_flower_market_Jessore.jpg"},
+  {id:"narail",n:"নড়াইল",d:"খুলনা",e:"🎨",s:"চিত্রশিল্পী এস এম সুলতানের জন্মভূমি। চিত্রা-মধুমতির সৌন্দর্যে ঘেরা সবুজ জেলা।",img:W+"6/6d/SM_Sultan_Museum_Narail.jpg/400px-SM_Sultan_Museum_Narail.jpg"},
+  {id:"magura",n:"মাগুরা",d:"খুলনা",e:"🌿",s:"নবগঙ্গা নদীর তীরে অবস্থিত। তামাক, পাট ও সবজি চাষের জন্য পরিচিত।",img:W+"1/1d/Magura_district_Bangladesh.jpg/400px-Magura_district_Bangladesh.jpg"},
+  {id:"meherpur",n:"মেহেরপুর",d:"খুলনা",e:"🏳️",s:"মুজিবনগরের জেলা। ১৯৭১ সালে বাংলাদেশের প্রথম সরকার এখানে শপথ নেয়।",img:W+"d/d9/Mujibnagar_Complex_Meherpur.jpg/400px-Mujibnagar_Complex_Meherpur.jpg"},
+  {id:"chuadanga",n:"চুয়াডাঙ্গা",d:"খুলনা",e:"☀️",s:"বাংলাদেশের উষ্ণতম জেলা। সবজি, তামাক চাষ ও দর্শনা স্থলবন্দরের জেলা।",img:W+"e/e8/Chuadanga_district.jpg/400px-Chuadanga_district.jpg"},
+  {id:"kushtia",n:"কুষ্টিয়া",d:"খুলনা",e:"🎶",s:"লালন সাঁইজির তীর্থভূমি ও রবীন্দ্রনাথের শিলাইদহ। বাউল সংগীতের রাজধানী।",img:W+"0/07/Lalon_Shah_Mazar_Kushtia.jpg/400px-Lalon_Shah_Mazar_Kushtia.jpg"},
+  {id:"jhenaidah",n:"ঝিনাইদহ",d:"খুলনা",e:"🌾",s:"কপোতাক্ষ নদীর তীরে অবস্থিত। মাইকেল মধুসূদন দত্তের জন্মভূমি সাগরদাঁড়ি এখানে।",img:W+"5/59/Michael_Madhusudan_museum_Sagardari.jpg/400px-Michael_Madhusudan_museum_Sagardari.jpg"},
+
+  /* ── বরিশাল বিভাগ ── */
+  {id:"barisal",n:"বরিশাল",d:"বরিশাল",e:"🚢",s:"ভাটির দেশ। জীবনানন্দ দাশ ও শেরে বাংলার জন্মভূমি। লঞ্চ যোগাযোগের অনন্য শহর।",img:W+"7/74/Barisal_Launch_Terminal.jpg/400px-Barisal_Launch_Terminal.jpg"},
+  {id:"patuakhali",n:"পটুয়াখালী",d:"বরিশাল",e:"🌊",s:"সাগরকন্যা কুয়াকাটার জেলা। একই স্থান থেকে সূর্যোদয় ও সূর্যাস্ত দেখার দুর্লভ সুযোগ।",img:W+"1/11/Kuakata_beach_Bangladesh.jpg/400px-Kuakata_beach_Bangladesh.jpg"},
+  {id:"bhola",n:"ভোলা",d:"বরিশাল",e:"🏝️",s:"বাংলাদেশের একমাত্র দ্বীপ জেলা। মেঘনা-তেঁতুলিয়া নদীবেষ্টিত। মনপুরার অপরূপ প্রকৃতি।",img:W+"b/b5/Bhola_district_Bangladesh.jpg/400px-Bhola_district_Bangladesh.jpg"},
+  {id:"barguna",n:"বরগুনা",d:"বরিশাল",e:"🐊",s:"সুন্দরবনের লাগোয়া জেলা। হরিণ ও কুমির সংরক্ষণ কেন্দ্র এবং বঙ্গোপসাগরের তীরবর্তী।",img:W+"4/4a/Barguna_district.jpg/400px-Barguna_district.jpg"},
+  {id:"pirojpur",n:"পিরোজপুর",d:"বরিশাল",e:"🥥",s:"নদী-খালের জেলা। নারিকেল-সুপারির বাগান ও স্বরূপকাঠির ভাসমান পেয়ারা বাজারের জন্য বিখ্যাত।",img:W+"8/8c/Floating_market_Pirojpur.jpg/400px-Floating_market_Pirojpur.jpg"},
+  {id:"jhalokati",n:"ঝালকাঠি",d:"বরিশাল",e:"⛵",s:"ঐতিহ্যবাহী ভাসমান পেয়ারা বাজারের জেলা। বাংলাদেশের ক্ষুদ্রতম জেলাগুলোর একটি।",img:W+"f/f7/Jhalokati_district.jpg/400px-Jhalokati_district.jpg"},
+
+  /* ── সিলেট বিভাগ ── */
+  {id:"sylhet",n:"সিলেট",d:"সিলেট",e:"🍵",s:"চায়ের রাজধানী ও শাহজালালের পুণ্যভূমি। জাফলং, রাতারগুল ও বিছনাকান্দির অপূর্ব প্রকৃতি।",img:W+"5/5d/Sylhet_collage.jpg/400px-Sylhet_collage.jpg"},
+  {id:"moulvibazar",n:"মৌলভীবাজার",d:"সিলেট",e:"🌿",s:"চা বাগান ও হাওরের জেলা। লাউয়াছড়া জাতীয় উদ্যান, মাধবপুর লেক ও হাকালুকি হাওর বিখ্যাত।",img:W+"c/c0/Lawachara_national_park.jpg/400px-Lawachara_national_park.jpg"},
+  {id:"habiganj",n:"হবিগঞ্জ",d:"সিলেট",e:"🌲",s:"রেমা-কালেঙ্গা বন ও প্রাকৃতিক গ্যাসের জেলা। চা বাগান ও হাওরের অসাধারণ সৌন্দর্য।",img:W+"6/6b/Rema_Kalenga_forest.jpg/400px-Rema_Kalenga_forest.jpg"},
+  {id:"sunamganj",n:"সুনামগঞ্জ",d:"সিলেট",e:"💧",s:"হাওরের দেশ। টাঙ্গুয়ার হাওর রামসার স্থান। হাসন রাজার জন্মভূমি। নীলাদ্রি লেকের অনন্য সৌন্দর্য।",img:W+"1/13/Tanguar_haor_Sunamganj.jpg/400px-Tanguar_haor_Sunamganj.jpg"},
+
+  /* ── রংপুর বিভাগ ── */
+  {id:"rangpur",n:"রংপুর",d:"রংপুর",e:"🌶️",s:"উত্তরের প্রধান শহর। তাজহাট জমিদারবাড়ি ও বেগম রোকেয়ার জন্মভূমি পায়রাবন্দের জেলা।",img:W+"d/d7/Tajhat_Palace_Rangpur.jpg/400px-Tajhat_Palace_Rangpur.jpg"},
+  {id:"dinajpur",n:"দিনাজপুর",d:"রংপুর",e:"🍚",s:"কান্তজিউ মন্দির ও কালো জিরা চালের জেলা। রামসাগর বাংলাদেশের বৃহত্তম মানবনির্মিত দীঘি।",img:W+"9/98/Kantajew_Temple_Dinajpur_Bangladesh.jpg/400px-Kantajew_Temple_Dinajpur_Bangladesh.jpg"},
+  {id:"kurigram",n:"কুড়িগ্রাম",d:"রংপুর",e:"🌊",s:"ব্রহ্মপুত্র ও ধরলা নদীর জেলা। চর অঞ্চলের বিস্তীর্ণ প্রান্তর ও প্রকৃতির অসাধারণ সৌন্দর্য।",img:W+"3/3b/Kurigram_district.jpg/400px-Kurigram_district.jpg"},
+  {id:"gaibandha",n:"গাইবান্ধা",d:"রংপুর",e:"🏄",s:"যমুনা ও ব্রহ্মপুত্রের তীরে চর অঞ্চলের বিস্তীর্ণ প্রান্তর। বালু চরের অনন্য দৃশ্যের জেলা।",img:W+"6/6a/Gaibandha_district.jpg/400px-Gaibandha_district.jpg"},
+  {id:"lalmonirhat",n:"লালমনিরহাট",d:"রংপুর",e:"🚂",s:"তিস্তা নদীর তীরের জেলা। বুড়িমারী স্থলবন্দর ভারতের সাথে বাণিজ্যের গুরুত্বপূর্ণ পথ।",img:W+"b/b1/Lalmonirhat_district.jpg/400px-Lalmonirhat_district.jpg"},
+  {id:"nilphamari",n:"নীলফামারী",d:"রংপুর",e:"❄️",s:"নীলের খামারের ইতিহাসের জেলা। সৈয়দপুর বিমানবন্দর ও বাংলাদেশের বৃহত্তম রেলওয়ে কারখানা।",img:W+"0/04/Nilphamari_district.jpg/400px-Nilphamari_district.jpg"},
+  {id:"panchagarh",n:"পঞ্চগড়",d:"রংপুর",e:"🏔️",s:"বাংলাদেশের সর্বোত্তরের জেলা। এখান থেকে হিমালয়ের কাঞ্চনজঙ্ঘা দেখা যায়। তেঁতুলিয়া চা বাগান।",img:W+"d/d0/Panchagarh_Kanchenjunga_view.jpg/400px-Panchagarh_Kanchenjunga_view.jpg"},
+  {id:"thakurgaon",n:"ঠাকুরগাঁও",d:"রংপুর",e:"🌻",s:"গম, সরিষা ও গোলআলুর জেলা। হরিপুর তেলক্ষেত্র ও রাজা টংকনাথের ঐতিহাসিক স্মৃতির জেলা।",img:W+"7/77/Thakurgaon_district.jpg/400px-Thakurgaon_district.jpg"},
+
+  /* ── ময়মনসিংহ বিভাগ ── */
+  {id:"mymensingh",n:"ময়মনসিংহ",d:"ময়মনসিংহ",e:"🎓",s:"শিক্ষা ও সংস্কৃতির শহর। বাংলাদেশ কৃষি বিশ্ববিদ্যালয় ও ময়মনসিংহ গীতিকার জন্মভূমি।",img:W+"8/88/Bangladesh_Agricultural_University.jpg/400px-Bangladesh_Agricultural_University.jpg"},
+  {id:"netrokona",n:"নেত্রকোণা",d:"ময়মনসিংহ",e:"💧",s:"হাওর ও গারো পাহাড়ের মিলনস্থল। বিরিশিরি উপজাতীয় কালচারাল একাডেমির জন্য বিখ্যাত।",img:W+"9/97/Birishiri_Netrokona.jpg/400px-Birishiri_Netrokona.jpg"},
+  {id:"jamalpur",n:"জামালপুর",d:"ময়মনসিংহ",e:"🏺",s:"যমুনার তীরে মৃৎশিল্প ও নকশিকাঁথার জেলা। বাহাদুরাবাদ ঘাট ঐতিহাসিকভাবে গুরুত্বপূর্ণ।",img:W+"e/e8/Jamalpur_district.jpg/400px-Jamalpur_district.jpg"},
+  {id:"sherpur",n:"শেরপুর",d:"ময়মনসিংহ",e:"🐘",s:"গারো পাহাড়ের পাদদেশে। মধুটিলা ইকোপার্ক ও গজনী অবকাশ কেন্দ্র পর্যটকদের আকর্ষণ।",img:W+"f/f9/Gazni_Sherpur.jpg/400px-Gazni_Sherpur.jpg"},
+];
+
+function imgHtml(d){
+  if(!d.img) return `<div class="cfb">${d.e}</div>`;
+  return `<img src="${d.img}" alt="${d.n}" loading="lazy"
+    onerror="this.parentElement.innerHTML='<div class=cfb>${d.e}</div>'">`;
+}
+function render(list){
+  const g=document.getElementById('grid'),nr=document.getElementById('nr');
+  if(!list.length){g.innerHTML='';nr.style.display='block';return;}
+  nr.style.display='none';
+  g.innerHTML=list.map(d=>`
+    <a class="card" href="zela.html?id=${d.id}">
+      <div class="cimg">${imgHtml(d)}<span class="dbadge">${d.d}</span></div>
+      <div class="cbody">
+        <div class="cname">${d.n}</div>
+        <div class="cdesc">${d.s}</div>
+        <div class="cfoot"><span class="clink">বিস্তারিত পড়ুন →</span><span>${d.e}</span></div>
+      </div>
+    </a>`).join('');
+}
+let cur='সব';
+function go(){
+  const q=document.getElementById('si').value.trim();
+  let list=D;
+  if(cur!=='সব') list=list.filter(x=>x.d===cur);
+  if(q) list=list.filter(x=>x.n.includes(q)||x.s.includes(q));
+  document.getElementById('stitle').textContent=
+    cur==='সব'?'সকল ৬৪টি জেলা':`${cur} বিভাগের জেলাসমূহ`;
+  render(list);
+}
+document.querySelectorAll('.fb').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); cur=b.dataset.d; go();
+  });
+});
+document.getElementById('si').addEventListener('input',go);
+go();
+</script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>জেলার বিস্তারিত — জেলা.পাতা.বাংলা</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- ======= ADS.JS — MKX / BANNER / POPUNDER / SMARTLINK ======= -->
+<script src="ads.js"></script>
+<div id="ad-popunder" data-ad-type="popunder" style="display:none"></div>
+<div id="ad-smartlink" data-ad-type="smartlink" style="display:none"></div>
+
+<style>
+:root{
+  --fd:'Noto Serif Bengali','Hind Siliguri',serif;
+  --fb:'Hind Siliguri',sans-serif;
+  --green:#0b5c2e;--green2:#168040;--green3:#1fa04e;
+  --green-pale:#e5f5ec;--green-dark:#083d1e;
+  --gold:#d4a017;--text:#181818;--muted:#4e6358;
+  --bg:#f2f7f4;--white:#fff;--border:#cce0d4;
+  --sh:0 2px 18px rgba(11,92,46,0.09);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);}
+
+/* HEADER */
+header{background:linear-gradient(100deg,var(--green-dark),var(--green));color:#fff;padding:12px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:300;box-shadow:0 3px 20px rgba(0,0,0,.25);}
+.back{color:#fff;text-decoration:none;font-size:.87rem;background:rgba(255,255,255,.15);padding:7px 16px;border-radius:20px;transition:background .2s;white-space:nowrap;}
+.back:hover{background:rgba(255,255,255,.26);}
+.hlogo{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:#fff;text-decoration:none;}
+
+/* AD LEADERBOARD */
+.ad-leader{background:#fff;border-bottom:1px solid var(--border);text-align:center;padding:8px 10px;min-height:62px;overflow:hidden;}
+.ad-lbl{font-size:.62rem;color:#c0c0c0;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em;}
+
+/* BANNER */
+.banner{position:relative;height:400px;overflow:hidden;background:linear-gradient(135deg,var(--green-dark),var(--green2));}
+.banner-img{width:100%;height:100%;object-fit:cover;opacity:.6;display:block;}
+.banner-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,61,30,.95) 0%,rgba(8,61,30,.4) 55%,transparent 100%);}
+.banner-content{position:absolute;bottom:0;left:0;right:0;padding:32px 28px 30px;}
+.bmax{max-width:980px;margin:0 auto;}
+.bbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,160,23,.92);color:#1a1a1a;font-size:.74rem;font-weight:700;padding:4px 14px;border-radius:14px;margin-bottom:10px;}
+.btitle{font-family:var(--fd);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.4);line-height:1.15;margin-bottom:6px;}
+.bsub{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.55;}
+
+/* GALLERY */
+.gallery{display:flex;gap:8px;padding:14px 20px;overflow-x:auto;background:#fff;border-bottom:1px solid var(--border);scrollbar-width:none;}
+.gallery::-webkit-scrollbar{display:none;}
+.gallery img{height:105px;width:168px;object-fit:cover;border-radius:8px;flex-shrink:0;cursor:pointer;transition:transform .2s,box-shadow .2s;border:2px solid var(--border);}
+.gallery img:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(11,92,46,.2);border-color:var(--green);}
+
+/* STATS BAR */
+.sbar{background:#fff;border-bottom:1px solid var(--border);padding:12px 20px;}
+.sbar-in{max-width:980px;margin:0 auto;display:flex;flex-wrap:wrap;}
+.si{flex:1;min-width:110px;padding:8px 14px;border-right:1px solid var(--border);text-align:center;}
+.si:last-child{border-right:none;}
+.sin{font-family:var(--fd);font-size:1.12rem;font-weight:700;color:var(--green);display:block;}
+.sil{font-size:.7rem;color:var(--muted);}
+
+/* AD after stats */
+.ad-rect{background:#fff;border:1px solid var(--border);text-align:center;padding:10px;min-height:100px;overflow:hidden;}
+.ad-rect-wrap{max-width:980px;margin:0 auto;padding:12px 20px;}
+
+/* CONTENT GRID */
+.wrap{max-width:980px;margin:0 auto;padding:24px 20px 60px;display:grid;grid-template-columns:1fr 290px;gap:24px;}
+@media(max-width:860px){.wrap{grid-template-columns:1fr;}}
+
+/* SECTIONS */
+.sec{background:#fff;border-radius:12px;border:1px solid var(--border);padding:24px;margin-bottom:20px;box-shadow:var(--sh);}
+.sh{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--green-pale);}
+.sico{width:40px;height:40px;background:var(--green-pale);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;}
+.stl{font-family:var(--fd);font-size:1.18rem;font-weight:700;color:var(--green);}
+.sbody{font-size:.95rem;line-height:1.95;color:var(--text);}
+.sbody p{margin-bottom:12px;}
+.sbody p:last-child{margin-bottom:0;}
+.sbody h4{font-family:var(--fd);color:var(--green);font-size:1.02rem;margin:16px 0 6px;}
+
+/* PLACE CARDS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.pc{background:var(--green-pale);border-radius:9px;padding:14px;border:1px solid var(--border);}
+.pc-img{width:100%;height:84px;object-fit:cover;border-radius:7px;margin-bottom:8px;border:1px solid var(--border);}
+.pico{font-size:1.5rem;margin-bottom:5px;}
+.pname{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--green);margin-bottom:3px;}
+.pdesc{font-size:.78rem;color:var(--muted);line-height:1.5;}
+
+/* FOOD */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;}
+.fc{text-align:center;background:var(--green-pale);border-radius:9px;padding:16px 10px;border:1px solid var(--border);}
+.ficon{font-size:2.1rem;margin-bottom:6px;}
+.fname{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--green);}
+.fdesc{font-size:.74rem;color:var(--muted);margin-top:3px;line-height:1.45;}
+
+/* PERSONS */
+.plist{display:flex;flex-direction:column;gap:12px;}
+.pcard{display:flex;gap:14px;align-items:flex-start;background:var(--green-pale);border-radius:9px;padding:14px;border:1px solid var(--border);}
+.pav{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.pname2{font-family:var(--fd);font-size:.98rem;font-weight:700;color:var(--green);}
+.prole{font-size:.78rem;color:var(--muted);margin-top:2px;line-height:1.45;}
+
+/* SIDEBAR */
+.sbc{background:#fff;border-radius:12px;border:1px solid var(--border);padding:18px;margin-bottom:16px;box-shadow:var(--sh);}
+.sbt{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--green);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--green-pale);}
+.sbr{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--green-pale);font-size:.84rem;}
+.sbr:last-child{border-bottom:none;}
+.sbk{color:var(--muted);}
+.sbv{font-weight:600;color:var(--text);}
+.ad-side{background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;min-height:280px;margin-bottom:16px;overflow:hidden;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tag{background:var(--green-pale);color:var(--green);font-size:.77rem;padding:4px 10px;border-radius:14px;border:1px solid var(--border);}
+
+/* BOTTOM NAV */
+.bnav{max-width:980px;margin:0 auto 40px;padding:0 20px;display:flex;gap:12px;}
+.nb{flex:1;padding:13px;border:1px solid var(--border);border-radius:9px;background:#fff;cursor:pointer;font-family:var(--fb);font-size:.84rem;color:var(--muted);text-decoration:none;text-align:center;transition:all .2s;}
+.nb:hover{border-color:var(--green);color:var(--green);}
+.nb strong{display:block;font-family:var(--fd);font-size:1rem;color:var(--text);}
+
+/* AD BOTTOM */
+.ad-bottom-wrap{max-width:980px;margin:0 auto;padding:0 20px 20px;}
+.ad-bottom{background:#fff;border:1px solid var(--border);border-radius:10px;text-align:center;padding:10px;min-height:100px;overflow:hidden;}
+
+footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:rgba(255,255,255,.78);text-align:center;padding:24px 20px;font-size:.84rem;}
+.flogo2{font-family:var(--fd);color:#fff;font-size:1.1rem;display:block;margin-bottom:5px;}
+.fad{margin:12px auto;max-width:728px;min-height:60px;overflow:hidden;}
+
+@media(max-width:600px){
+  .banner{height:260px;}
+  .btitle{font-size:1.9rem;}
+  .gallery img{height:82px;width:126px;}
+  .sbar-in{gap:0;}
+  .si{min-width:90px;padding:6px 8px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back">← সব জেলা</a>
+  <a href="index.html" class="hlogo">জেলা.পাতা.বাংলা</a>
+</header>
+
+<!-- AD: Leaderboard Top -->
+<div class="ad-leader">
+  <span class="ad-lbl">বিজ্ঞাপন</span>
+  <div id="ad-top" data-ad-slot="district-top-leader" data-ad-size="728x90" data-ad-type="banner"></div>
+</div>
+
+<div id="root"></div>
+
+<!-- AD: Bottom Banner -->
+<div class="ad-bottom-wrap">
+  <div class="ad-bottom">
+    <span class="ad-lbl">বিজ্ঞাপন</span>
+    <div id="ad-bottom-banner" data-ad-slot="district-bottom" data-ad-size="728x90" data-ad-type="mkx"></div>
+  </div>
+</div>
+
+<footer>
+  <span class="flogo2">জেলা.পাতা.বাংলা</span>
+  <p>বাংলাদেশের ৬৪ জেলার সম্পূর্ণ তথ্যভান্ডার · সকল তথ্য বাংলায়</p>
+  <div class="fad">
+    <span class="ad-lbl">বিজ্ঞাপন</span>
+    <div id="ad-footer" data-ad-slot="district-footer-leader" data-ad-size="728x90" data-ad-type="banner"></div>
+  </div>
+</footer>
+
+<script>
+/* =================================================================
+   সকল ৬৪ জেলার পূর্ণাঙ্গ ডেটাবেজ
+   ================================================================= */
+const W="https://upload.wikimedia.org/wikipedia/commons/thumb/";
+const DB={
+  dhaka:{
+    name:"ঢাকা",emoji:"🏙️",div:"ঢাকা",area:"১,৪৬৩",pop:"১ কোটি ৪০ লক্ষ+",upazila:"৫",found:"১৬১০",
+    banner:W+"a/a8/Dhaka_collage.jpg/1200px-Dhaka_collage.jpg",
+    gallery:[
+      W+"3/3e/Lalbagh_Fort_-_Dhaka.jpg/640px-Lalbagh_Fort_-_Dhaka.jpg",
+      W+"9/9e/Ahsan_Manzil_Dhaka.jpg/640px-Ahsan_Manzil_Dhaka.jpg",
+      W+"4/42/National_Parliament_House%2C_Dhaka.jpg/640px-National_Parliament_House%2C_Dhaka.jpg",
+      W+"f/f9/Dhaka_University.jpg/640px-Dhaka_University.jpg",
+    ],
+    history:`ঢাকা বাংলাদেশের রাজধানী ও সর্ববৃহৎ মহানগরী। এর ইতিহাস হাজার বছরের পুরনো। মুঘল সুবাদার ইসলাম খান ১৬১০ সালে ঢাকাকে বাংলার রাজধানী ঘোষণা করেন এবং এর নাম রাখেন "জাহাঙ্গীরনগর"। তখন থেকেই এটি বাণিজ্য ও প্রশাসনের কেন্দ্র।\n\n"ঢাকাই মসলিন" ছিল মধ্যযুগের সবচেয়ে বিখ্যাত বস্ত্র — এতটাই সূক্ষ্ম যে একটি পূর্ণ কাপড় একটি আংটির মধ্য দিয়ে গলে যেত। ইউরোপীয় রাজদরবারেও এর কদর ছিল।\n\nব্রিটিশ শাসনামলে ঢাকা ১৯০৫ সালে পূর্ববঙ্গ ও আসামের রাজধানী হয়। ১৯৪৭ সালে পাকিস্তান প্রতিষ্ঠার পর এটি পূর্ব পাকিস্তানের রাজধানী। ১৯৫২ সালের ভাষা আন্দোলন, ১৯৬৯-এর গণঅভ্যুত্থান ও ১৯৭১-এর মুক্তিযুদ্ধের কেন্দ্রবিন্দু ছিল ঢাকা। ২৫ মার্চ ১৯৭১ সালে পাকিস্তানি বাহিনী "অপারেশন সার্চলাইট" পরিচালনা করে ঢাকায় গণহত্যা চালায়। ১৬ ডিসেম্বর ১৯৭১ বাংলাদেশ স্বাধীন হয়।\n\nবর্তমানে প্রায় দুই কোটির বেশি মানুষের এই শহরে জাতীয় সংসদ ভবন, সুপ্রিম কোর্ট, প্রধান বিমানবন্দর, শীর্ষ বিশ্ববিদ্যালয় সবই এখানে। ঢাকার বুড়িগঙ্গা, শীতলক্ষ্যা ও তুরাগ নদী একসময় এই শহরের প্রাণ ছিল।`,
+    places:[
+      {ico:"🕌",nm:"লালবাগ কেল্লা",desc:"মুঘল সুবেদার শায়েস্তা খান ১৬৭৮ সালে নির্মাণ শুরু করেন। তিন গম্বুজ মসজিদ, পরী বিবির সমাধি ও দরবার হল এর মধ্যে অবস্থিত। বাংলাদেশের অন্যতম দর্শনীয় স্থান।",img:W+"c/c9/Lalbagh_fort.jpg/400px-Lalbagh_fort.jpg"},
+      {ico:"🏛️",nm:"আহসান মঞ্জিল",desc:"নবাব আহসানুল্লাহর গোলাপী প্রাসাদ, ১৮৭২ সালে নির্মিত। এখন জাতীয় জাদুঘর। বুড়িগঙ্গার তীরে অবস্থান।",img:W+"9/9e/Ahsan_Manzil_Dhaka.jpg/400px-Ahsan_Manzil_Dhaka.jpg"},
+      {ico:"🏛️",nm:"জাতীয় সংসদ ভবন",desc:"বিশ্বখ্যাত স্থপতি লুই কান ডিজাইন করা অনন্য স্থাপত্যশৈলীর ভবন। শেরেবাংলা নগরে অবস্থিত। ১৯৮২ সালে নির্মাণ সম্পন্ন।",img:W+"4/42/National_Parliament_House%2C_Dhaka.jpg/400px-National_Parliament_House%2C_Dhaka.jpg"},
+      {ico:"🎓",nm:"ঢাকা বিশ্ববিদ্যালয়",desc:"১৯২১ সালে প্রতিষ্ঠিত। মধুর ক্যান্টিন, কার্জন হল ও টিএসসি ঐতিহাসিক স্থান। 'প্রাচ্যের অক্সফোর্ড' নামে পরিচিত।",img:W+"f/f9/Dhaka_University.jpg/400px-Dhaka_University.jpg"},
+      {ico:"🕌",nm:"বায়তুল মোকাররম মসজিদ",desc:"জাতীয় মসজিদ। ১৯৬০ সালে নির্মিত। কা'বা শরিফের অনুকরণে তৈরি। একসাথে ৩০,০০০ মুসল্লি নামাজ পড়তে পারেন।",img:""},
+      {ico:"🎨",nm:"জাতীয় জাদুঘর",desc:"বাংলাদেশের ইতিহাস, শিল্পকলা ও প্রকৃতির সবচেয়ে বড় সংগ্রহশালা। শাহবাগে অবস্থিত।",img:""},
+      {ico:"🌿",nm:"রমনা পার্ক",desc:"শহরের প্রাণকেন্দ্রে বিশাল সবুজ উদ্যান। পহেলা বৈশাখে ছায়ানটের বর্ষবরণ এখানেই হয়।",img:""},
+      {ico:"🛒",nm:"পুরান ঢাকা",desc:"শাঁখারীপট্টি, চকবাজার, তাঁতীবাজার — মুঘল আমলের ঐতিহ্য বহন করা ঐতিহাসিক এলাকা। শত বছরের পুরনো মিষ্টি ও খাবারের দোকান।",img:""},
+    ],
+    foods:[
+      {ico:"🍛",nm:"কাচ্চি বিরিয়ানি",desc:"পুরান ঢাকার হাজির বিরিয়ানি বিশ্বমানের। কাঁচা গোশত দিয়ে রান্না করা এই বিরিয়ানির স্বাদ অতুলনীয়।"},
+      {ico:"🍢",nm:"বাকরখানি",desc:"মুঘল আমলের ঐতিহ্যবাহী রুটি। পুরান ঢাকার চকবাজারে পাওয়া যায়।"},
+      {ico:"🍮",nm:"বোরহানি",desc:"কাচ্চির সাথে পরিবেশিত মশলাদার দই পানীয়। বিয়েবাড়ির বিশেষ পানীয়।"},
+      {ico:"🫕",nm:"হালিম",desc:"শীতকালীন জনপ্রিয় খাবার। গম, ডাল ও মাংস দিয়ে তৈরি ঘন স্যুপ।"},
+      {ico:"🥩",nm:"শিক কাবাব",desc:"পুরান ঢাকার বিখ্যাত কাবাব। নাজিরাবাজারের কাবাব বিশেষভাবে জনপ্রিয়।"},
+    ],
+    persons:[
+      {ico:"🌟",nm:"বঙ্গবন্ধু শেখ মুজিবুর রহমান",role:"জাতির পিতা ও বাংলাদেশের প্রথম রাষ্ট্রপতি। রাজনৈতিক জীবন ঢাকাকেন্দ্রিক।"},
+      {ico:"✍️",nm:"হুমায়ূন আহমেদ",role:"বাংলা সাহিত্যের সর্বাধিক পঠিত লেখক ও চলচ্চিত্র পরিচালক।"},
+      {ico:"🎶",nm:"রুনা লায়লা",role:"কিংবদন্তি সংগীতশিল্পী ও সাংস্কৃতিক আইকন।"},
+      {ico:"📖",nm:"সুফিয়া কামাল",role:"মহীয়সী কবি ও নারী আন্দোলনের পথিকৃৎ।"},
+    ],
+    tags:["রাজধানী","মুঘল ঐতিহ্য","শিক্ষাকেন্দ্র","বাণিজ্যিক","মুক্তিযুদ্ধ"],
+  },
+
+  chittagong:{
+    name:"চট্টগ্রাম",emoji:"⚓",div:"চট্টগ্রাম",area:"৫,২৮৩",pop:"৮০ লক্ষ+",upazila:"১৫",found:"১৬৬৬",
+    banner:W+"8/84/Chittagong_collage.jpg/1200px-Chittagong_collage.jpg",
+    gallery:[
+      W+"2/2e/Foys_lake_Chittagong.jpg/640px-Foys_lake_Chittagong.jpg",
+      W+"f/f5/Patenga_Beach_Chittagong.jpg/640px-Patenga_Beach_Chittagong.jpg",
+      W+"6/66/Chittagong_port_container.jpg/640px-Chittagong_port_container.jpg",
+    ],
+    history:`চট্টগ্রাম বাংলাদেশের বাণিজ্যিক রাজধানী ও প্রধান সমুদ্রবন্দর। "পাহাড়ের রাণী" নামে পরিচিত এই শহরে পাহাড় ও সমুদ্রের অপূর্ব মিলন ঘটেছে।\n\nআরবীয় বণিকরা হাজার বছর আগে থেকেই চট্টগ্রাম বন্দর ব্যবহার করতেন। পর্তুগিজরা পঞ্চদশ শতাব্দীতে এখানে ঘাঁটি স্থাপন করে এর নাম দেন "পোর্তো গ্রান্দে"। মুঘল সুবাদার শায়েস্তা খান ১৬৬৬ সালে আরাকান রাজাদের কাছ থেকে চট্টগ্রাম দখল করেন।\n\n১৯৩০ সালের ১৮ এপ্রিল মাস্টারদা সূর্য সেনের নেতৃত্বে বিপ্লবীরা চট্টগ্রাম অস্ত্রাগার লুট করে ব্রিটিশ সাম্রাজ্যকে কাঁপিয়ে দেন। ১৯৭১ সালের ২৭ মার্চ কালুরঘাট বেতারকেন্দ্র থেকে মেজর জিয়াউর রহমান বঙ্গবন্ধুর পক্ষে স্বাধীনতার ঘোষণা দেন।\n\nবর্তমানে চট্টগ্রাম বন্দর দিয়ে বাংলাদেশের ৯০% আমদানি-রপ্তানি হয়। কর্ণফুলী নদীর তীরে এই শহরে রয়েছে বিশাল শিল্পাঞ্চল, বিমানবন্দর, পোশাক কারখানা ও জাহাজ ভাঙা শিল্প।`,
+    places:[
+      {ico:"⛵",nm:"পতেঙ্গা সমুদ্রসৈকত",desc:"চট্টগ্রামের সবচেয়ে জনপ্রিয় সৈকত। বিমানবন্দরের কাছে। সূর্যাস্তের দৃশ্য অপূর্ব।",img:W+"f/f5/Patenga_Beach_Chittagong.jpg/400px-Patenga_Beach_Chittagong.jpg"},
+      {ico:"🏔️",nm:"বাটালি হিল",desc:"শহরের সর্বোচ্চ পাহাড়। ১৭ একর আয়তনের এই পাহাড় থেকে পুরো চট্টগ্রাম শহর দেখা যায়।",img:""},
+      {ico:"🌊",nm:"ফয়'স লেক",desc:"পাহাড়ঘেরা কৃত্রিম হ্রদ। ব্রিটিশরা ১৯২৪ সালে তৈরি করেন। বর্তমানে বিনোদন পার্ক।",img:W+"2/2e/Foys_lake_Chittagong.jpg/400px-Foys_lake_Chittagong.jpg"},
+      {ico:"⚓",nm:"চট্টগ্রাম বন্দর",desc:"বাংলাদেশের প্রধান সমুদ্রবন্দর। ১৮৮৭ সালে প্রতিষ্ঠিত। দেশের ৯০% বৈদেশিক বাণিজ্য এখান দিয়ে।",img:W+"6/66/Chittagong_port_container.jpg/400px-Chittagong_port_container.jpg"},
+      {ico:"⚔️",nm:"ময়নামতি ওয়ার সিমেট্রি",desc:"দ্বিতীয় বিশ্বযুদ্ধে শহীদ সৈনিকদের সমাধিক্ষেত্র।",img:""},
+      {ico:"🎭",nm:"শিল্পকলা একাডেমি",desc:"চট্টগ্রামের সাংস্কৃতিক কেন্দ্র। বিভিন্ন সাংস্কৃতিক অনুষ্ঠানের আয়োজন।",img:""},
+    ],
+    foods:[
+      {ico:"🍛",nm:"মেজবান",desc:"চট্টগ্রামের ঐতিহ্যবাহী গরুর মাংসের ভোজ। বিশেষ অনুষ্ঠানে আয়োজন করা হয়।"},
+      {ico:"🥩",nm:"শুঁটকি ভর্তা",desc:"শুঁটকি মাছ দিয়ে তৈরি বিশেষ ভর্তা — চট্টগ্রামের অনন্য স্বাদ।"},
+      {ico:"🍜",nm:"লইট্টা শুঁটকি",desc:"লইট্টা মাছের শুঁটকি রান্না — চট্টগ্রামের বিশেষত্ব।"},
+      {ico:"🫕",nm:"কালাভুনা",desc:"বিশেষ মশলায় রান্না করা গরুর মাংস। চট্টগ্রামের ঐতিহ্যবাহী রেসিপি।"},
+    ],
+    persons:[
+      {ico:"🦁",nm:"মাস্টারদা সূর্য সেন",role:"ব্রিটিশবিরোধী সশস্ত্র আন্দোলনের নায়ক। চট্টগ্রাম অস্ত্রাগার লুটের নেতা।"},
+      {ico:"👨‍💼",nm:"জেনারেল জিয়াউর রহমান",role:"মুক্তিযুদ্ধের বীর ও বাংলাদেশের সাবেক রাষ্ট্রপতি।"},
+      {ico:"✍️",nm:"আলাওল",role:"মধ্যযুগীয় বাংলা সাহিত্যের বিখ্যাত কবি।"},
+    ],
+    tags:["বন্দর","পাহাড়","সমুদ্র","মুক্তিযুদ্ধ","বাণিজ্য","শিল্প"],
+  },
+
+  coxsbazar:{
+    name:"কক্সবাজার",emoji:"🏖️",div:"চট্টগ্রাম",area:"২,৪৯২",pop:"২৫ লক্ষ+",upazila:"৮",found:"১৯৮৪",
+    banner:W+"6/62/Cox%27s_Bazar_sea_beach.jpg/1200px-Cox%27s_Bazar_sea_beach.jpg",
+    gallery:[
+      W+"c/c2/Inani_Beach_Cox%27s_Bazar.jpg/640px-Inani_Beach_Cox%27s_Bazar.jpg",
+      W+"1/13/Saint_Martin_Island_Bangladesh.jpg/640px-Saint_Martin_Island_Bangladesh.jpg",
+      W+"9/90/Himchari_Cox%27s_Bazar.jpg/640px-Himchari_Cox%27s_Bazar.jpg",
+    ],
+    history:`কক্সবাজার বিশ্বের দীর্ঘতম অবিচ্ছিন্ন প্রাকৃতিক সমুদ্রসৈকতের জন্য বিশ্বখ্যাত। ১২০ কিলোমিটার দীর্ঘ এই সৈকত পৃথিবীর কোথাও নেই।\n\nব্রিটিশ ক্যাপ্টেন হিরাম কক্স ১৭৯৯ সালে এখানে একটি বাজার স্থাপন করেন। তাঁর নামেই স্থানটির নাম হয় "কক্সবাজার"। এর আগে এটি "পালংকি" নামে পরিচিত ছিল। আরাকানি রাজাদের শাসনকালে এটি একটি গুরুত্বপূর্ণ বন্দর ছিল।\n\nসেন্টমার্টিন দ্বীপ বাংলাদেশের একমাত্র প্রবালদ্বীপ — স্বচ্ছ নীল জল ও বিচিত্র সামুদ্রিক প্রাণীর এক অনন্য সংসার। ইনানীর পাথুরে সৈকত ও হিমছড়ির ঝরনা কক্সবাজারকে করেছে আরও আকর্ষণীয়।\n\nসাম্প্রতিক কালে রোহিঙ্গা শরণার্থী সমস্যা এই জেলাকে আন্তর্জাতিক মনোযোগের কেন্দ্রে এনেছে। উখিয়া-টেকনাফে বিশ্বের বৃহত্তম শরণার্থী শিবির রয়েছে।`,
+    places:[
+      {ico:"🌊",nm:"কক্সবাজার সমুদ্রসৈকত",desc:"বিশ্বের দীর্ঘতম ১২০ কিমি সৈকত। লাবণী, সুগন্ধা, কলাতলী পয়েন্ট জনপ্রিয়।",img:W+"6/62/Cox%27s_Bazar_sea_beach.jpg/400px-Cox%27s_Bazar_sea_beach.jpg"},
+      {ico:"🏝️",nm:"সেন্ট মার্টিন দ্বীপ",desc:"বাংলাদেশের একমাত্র প্রবালদ্বীপ। স্বচ্ছ নীল পানি ও বিচিত্র সামুদ্রিক প্রাণী।",img:W+"1/13/Saint_Martin_Island_Bangladesh.jpg/400px-Saint_Martin_Island_Bangladesh.jpg"},
+      {ico:"🌿",nm:"হিমছড়ি",desc:"পাহাড় ও সমুদ্রের মাঝে সুন্দর ঝরনা। রাস্তার পাশেই সমুদ্র দেখা যায়।",img:W+"9/90/Himchari_Cox%27s_Bazar.jpg/400px-Himchari_Cox%27s_Bazar.jpg"},
+      {ico:"🪨",nm:"ইনানী সৈকত",desc:"পাথুরে সৈকত। বড় পাথরের সারির মাঝে ঢেউয়ের দৃশ্য অনন্য।",img:W+"c/c2/Inani_Beach_Cox%27s_Bazar.jpg/400px-Inani_Beach_Cox%27s_Bazar.jpg"},
+      {ico:"🏕️",nm:"রামু বৌদ্ধ বিহার",desc:"শতাধিক বছরের পুরনো বৌদ্ধ মন্দির ও বিহার।",img:""},
+    ],
+    foods:[
+      {ico:"🦞",nm:"তাজা চিংড়ি ভাজা",desc:"সমুদ্র থেকে সরাসরি আনা তাজা চিংড়ি — অতুলনীয় স্বাদ।"},
+      {ico:"🐟",nm:"রূপচাঁদা ভাজা",desc:"সামুদ্রিক রূপচাঁদা মাছ ভাজা।"},
+      {ico:"🍜",nm:"বার্মিজ নুডলস",desc:"রাখাইন সম্প্রদায়ের ঐতিহ্যবাহী রান্না।"},
+      {ico:"🦀",nm:"তাজা কাঁকড়া",desc:"তাজা কাঁকড়ার বিশেষ রান্না।"},
+    ],
+    persons:[
+      {ico:"🌊",nm:"ক্যাপ্টেন হিরাম কক্স",role:"ব্রিটিশ অফিসার, যার নামে কক্সবাজারের নামকরণ।"},
+      {ico:"🎭",nm:"রাখাইন সম্প্রদায়",role:"ঐতিহ্যবাহী বৌদ্ধ সংস্কৃতির ধারক।"},
+    ],
+    tags:["সৈকত","পর্যটন","দ্বীপ","মৎস্য","রাখাইন","প্রকৃতি"],
+  },
+
+  sylhet:{
+    name:"সিলেট",emoji:"🍵",div:"সিলেট",area:"৩,৪৫২",pop:"৩৫ লক্ষ+",upazila:"১৩",found:"১৮৭৮",
+    banner:W+"5/5d/Sylhet_collage.jpg/1200px-Sylhet_collage.jpg",
+    gallery:[
+      W+"7/73/Shahjalal_Dargah_Sylhet.jpg/640px-Shahjalal_Dargah_Sylhet.jpg",
+      W+"4/43/Jaflong_Sylhet.jpg/640px-Jaflong_Sylhet.jpg",
+      W+"1/12/Ratargul_swamp_forest.jpg/640px-Ratargul_swamp_forest.jpg",
+      W+"3/33/Tea_garden_Sylhet.jpg/640px-Tea_garden_Sylhet.jpg",
+    ],
+    history:`সিলেট বাংলাদেশের পূর্বোত্তরের প্রধান শহর। হযরত শাহজালাল (রহ.) ১৩০৩ সালে ৩৬০ জন আউলিয়াসহ এখানে আসেন এবং ইসলাম প্রচার করেন। তাঁর আগমনেই সিলেট "জালালাবাদ" নামে পরিচিতি পায়।\n\nচা শিল্পে সিলেটের অবদান অসাধারণ। ১৮৫৪ সালে মেজর মানি সিলেটে প্রথম চা বাগান স্থাপন করেন। বর্তমানে বাংলাদেশের মোট চা উৎপাদনের ৯০% এই বিভাগ থেকে আসে।\n\nসিলেটের প্রবাসী সম্প্রদায় বাংলাদেশের রেমিট্যান্স আয়ে বিশাল অবদান রাখে। যুক্তরাজ্যে বাংলাদেশি রেস্টুরেন্টের বেশিরভাগ মালিকই সিলেট বিভাগের।\n\nজাফলং, বিছনাকান্দি, লালাখাল ও রাতারগুল জলাবন — এই চারটি স্থান সিলেটকে বাংলাদেশের প্রকৃতি পর্যটনের রাজধানী করে তুলেছে।`,
+    places:[
+      {ico:"🕌",nm:"হযরত শাহজালাল (রহ.) দরগাহ",desc:"বাংলাদেশের সবচেয়ে পবিত্র স্থানগুলোর একটি। প্রতিদিন হাজারো ভক্ত জিয়ারত করেন।",img:W+"7/73/Shahjalal_Dargah_Sylhet.jpg/400px-Shahjalal_Dargah_Sylhet.jpg"},
+      {ico:"🌿",nm:"জাফলং",desc:"ভারত সীমান্তের কাছে পিয়াইন নদীর স্বচ্ছ জলে পাথর কুড়ানো এক অনন্য অভিজ্ঞতা।",img:W+"4/43/Jaflong_Sylhet.jpg/400px-Jaflong_Sylhet.jpg"},
+      {ico:"🌳",nm:"রাতারগুল জলাবন",desc:"বাংলাদেশের একমাত্র মিঠাপানির জলাবন। বর্ষায় নৌকায় করে বনের ভেতর ঘুরে আসুন।",img:W+"1/12/Ratargul_swamp_forest.jpg/400px-Ratargul_swamp_forest.jpg"},
+      {ico:"💙",nm:"লালাখাল",desc:"নীলচে সবুজ জলের মনোমুগ্ধকর নদী। পাশে চা বাগানের সারি।",img:""},
+      {ico:"🪨",nm:"বিছনাকান্দি",desc:"মেঘালয় পাহাড় থেকে নেমে আসা ঝরনা ও স্বচ্ছ পানির অপূর্ব দৃশ্য।",img:""},
+      {ico:"🍵",nm:"চা বাগান",desc:"মালনীছড়া, লাক্কাতুরাসহ শতাধিক চা বাগান। সবুজ পাহাড়ের গায়ে চা পাতার মনোরম দৃশ্য।",img:W+"3/33/Tea_garden_Sylhet.jpg/400px-Tea_garden_Sylhet.jpg"},
+    ],
+    foods:[
+      {ico:"🍵",nm:"সিলেটি চা",desc:"বিশেষ মশলাযুক্ত চা — সিলেটের প্রতীক।"},
+      {ico:"🥩",nm:"সাত কড়া গরু",desc:"বিশেষ লেবু জাতীয় ফল সাত কড়া দিয়ে রান্না করা গরুর মাংস।"},
+      {ico:"🍛",nm:"সিলেটি বিরিয়ানি",desc:"বিশেষ মশলার অনন্য স্বাদের বিরিয়ানি।"},
+      {ico:"🫙",nm:"আচার",desc:"বিভিন্ন ফলের ঘরে তৈরি আচার — সিলেটের ঐতিহ্য।"},
+    ],
+    persons:[
+      {ico:"🎵",nm:"হাসন রাজা",role:"বিখ্যাত বাউল কবি ও সুরকার। 'লোকে বলে বলে রে' গানের রচয়িতা।"},
+      {ico:"🎶",nm:"শাহ আবদুল করিম",role:"কিংবদন্তি বাউল শিল্পী। ভাটির দেশের সুরের সাধক।"},
+      {ico:"🏏",nm:"সাকিব আল হাসান",role:"বিশ্বের অন্যতম সেরা অলরাউন্ড ক্রিকেটার।"},
+      {ico:"📚",nm:"সৈয়দ মুজতবা আলী",role:"বাংলা রম্য সাহিত্যের পথিকৃৎ। 'দেশে-বিদেশে' গ্রন্থের রচয়িতা।"},
+    ],
+    tags:["চা","হাওর","জলাবন","পাহাড়","ইসলামিক","প্রবাসী"],
+  },
+
+  rangamati:{
+    name:"রাঙ্গামাটি",emoji:"⛰️",div:"চট্টগ্রাম",area:"৬,১১৬",pop:"৬ লক্ষ+",upazila:"১০",found:"১৮৬০",
+    banner:W+"5/5c/Kaptai_lake.jpg/1200px-Kaptai_lake.jpg",
+    gallery:[
+      W+"8/8c/Sajek_Valley_Rangamati.jpg/640px-Sajek_Valley_Rangamati.jpg",
+      W+"4/44/Hanging_Bridge_Rangamati.jpg/640px-Hanging_Bridge_Rangamati.jpg",
+    ],
+    history:`রাঙ্গামাটি পার্বত্য চট্টগ্রামের সবচেয়ে বড় জেলা। ১৯৬০ সালে কাপ্তাই বাঁধ নির্মাণের ফলে কর্ণফুলী নদীতে বিশাল জলাধার তৈরি হয়। "কাপ্তাই লেক" এখন এশিয়ার অন্যতম বৃহত্তম কৃত্রিম হ্রদ।\n\nচাকমা, মারমা, তঞ্চঙ্গ্যা, ত্রিপুরাসহ বিভিন্ন ক্ষুদ্র নৃগোষ্ঠীর মানুষ এখানে বাস করেন। তাদের নিজস্ব ভাষা, পোশাক, উৎসব ও সংস্কৃতি এই জেলাকে অনন্য করে তুলেছে।\n\nসাজেক ভ্যালি — "মেঘের দেশ" — এখন বাংলাদেশের সবচেয়ে আলোচিত পর্যটন স্থান। পাহাড়ের চূড়া থেকে মেঘের সাগরে ডুবে থাকার অনুভূতি অনির্বচনীয়।`,
+    places:[
+      {ico:"🌊",nm:"কাপ্তাই লেক",desc:"এশিয়ার অন্যতম বৃহত্তম কৃত্রিম হ্রদ। নৌকায় ঘুরে পাহাড়ি দৃশ্য উপভোগ।",img:W+"5/5c/Kaptai_lake.jpg/400px-Kaptai_lake.jpg"},
+      {ico:"🌫️",nm:"সাজেক ভ্যালি",desc:"মেঘের রাজ্য সাজেক। পাহাড়ের চূড়া থেকে মেঘের খেলা দেখার অনন্য স্থান।",img:W+"8/8c/Sajek_Valley_Rangamati.jpg/400px-Sajek_Valley_Rangamati.jpg"},
+      {ico:"🌉",nm:"ঝুলন্ত সেতু",desc:"রাঙ্গামাটি শহরের বিখ্যাত ঝুলন্ত সেতু। নিচে কাপ্তাই লেক।",img:W+"4/44/Hanging_Bridge_Rangamati.jpg/400px-Hanging_Bridge_Rangamati.jpg"},
+    ],
+    foods:[
+      {ico:"🌿",nm:"বাঁশের কোরল",desc:"পার্বত্য অঞ্চলের বিশেষ সবজি।"},
+      {ico:"🐔",nm:"পার্বত্য মুরগি রান্না",desc:"দেশীয় মুরগির বিশেষ রান্না।"},
+      {ico:"🍌",nm:"পার্বত্য কলা ও ফলমূল",desc:"বিচিত্র ও সুস্বাদু পাহাড়ি ফলের সমাহার।"},
+    ],
+    persons:[
+      {ico:"👑",nm:"চাকমা রাজপরিবার",role:"পার্বত্য অঞ্চলের ঐতিহ্যবাহী নেতৃত্ব।"},
+    ],
+    tags:["পাহাড়","হ্রদ","সাজেক","মেঘ","উপজাতি","প্রকৃতি"],
+  },
+
+  khulna:{
+    name:"খুলনা",emoji:"🐯",div:"খুলনা",area:"৪,৩৯৪",pop:"২৫ লক্ষ+",upazila:"৯",found:"১৮৮২",
+    banner:W+"9/96/Sundarbans_Mangrove_forest.jpg/1200px-Sundarbans_Mangrove_forest.jpg",
+    gallery:[
+      W+"b/b8/Sundarbans_boat_tour.jpg/640px-Sundarbans_boat_tour.jpg",
+      W+"6/6f/Sundarbans_Tiger.jpg/640px-Sundarbans_Tiger.jpg",
+      W+"c/c2/Shait_Gambuj_Mosque%2C_Bagerhat.jpg/640px-Shait_Gambuj_Mosque%2C_Bagerhat.jpg",
+    ],
+    history:`খুলনা বাংলাদেশের তৃতীয় বৃহত্তম শহর। বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের প্রবেশদ্বার হিসেবে খুলনা বিশ্বখ্যাত।\n\nহযরত খান জাহান আলী পঞ্চদশ শতাব্দীতে এই অঞ্চলে ইসলাম প্রচার করেন। তাঁর নির্মিত ষাটগম্বুজ মসজিদ ইউনেস্কোর বিশ্ব ঐতিহ্যবাহী স্থান। বাগেরহাটে তাঁর মাজারের পাশের দীঘিতে বড় বড় কুমির বাস করে।\n\nসুন্দরবনে রয়েল বেঙ্গল টাইগার, চিত্রা হরিণ, ইরাবতী ডলফিনসহ বিচিত্র সব প্রাণী রয়েছে। এই বনের মধু দেশের সেরা মধু হিসেবে পরিচিত।\n\nবাগদা ও গলদা চিংড়ি রপ্তানি থেকে খুলনা অঞ্চল বিশাল বৈদেশিক মুদ্রা অর্জন করে।`,
+    places:[
+      {ico:"🐯",nm:"সুন্দরবন",desc:"বিশ্বের বৃহত্তম ম্যানগ্রোভ বন। রয়েল বেঙ্গল টাইগারের আবাসস্থল। ইউনেস্কো ঐতিহ্যবাহী স্থান।",img:W+"9/96/Sundarbans_Mangrove_forest.jpg/400px-Sundarbans_Mangrove_forest.jpg"},
+      {ico:"🕌",nm:"ষাটগম্বুজ মসজিদ",desc:"১৫ শতকের ইউনেস্কো স্বীকৃত ঐতিহাসিক মসজিদ। ৬০ স্তম্ভের উপর ৭৭ গম্বুজ।",img:W+"c/c2/Shait_Gambuj_Mosque%2C_Bagerhat.jpg/400px-Shait_Gambuj_Mosque%2C_Bagerhat.jpg"},
+      {ico:"🦌",nm:"করমজল পর্যটন কেন্দ্র",desc:"সুন্দরবনে কুমির ও হরিণ দেখার সহজ সুযোগ।",img:""},
+      {ico:"🕌",nm:"খান জাহান আলীর মাজার",desc:"ঐতিহাসিক মাজার। পাশের দীঘিতে বিশাল কুমির।",img:""},
+    ],
+    foods:[
+      {ico:"🦐",nm:"বাগদা চিংড়ি",desc:"খুলনার সবচেয়ে বিখ্যাত রপ্তানি পণ্য।"},
+      {ico:"🍯",nm:"সুন্দরবনের মধু",desc:"বিশ্বের সেরা মধু। অনন্য স্বাদ ও ঔষধি গুণ।"},
+      {ico:"🐟",nm:"ভেটকি মাছ",desc:"সামুদ্রিক ভেটকি মাছ।"},
+      {ico:"🦀",nm:"কাঁকড়া ভুনা",desc:"তাজা কাঁকড়ার বিশেষ রান্না।"},
+    ],
+    persons:[
+      {ico:"🎨",nm:"এস এম সুলতান",role:"বিশ্বখ্যাত চিত্রশিল্পী। কৃষকের পেশিবহুল শরীরের চিত্র তার বিশেষত্ব।"},
+      {ico:"✍️",nm:"মাইকেল মধুসূদন দত্ত",role:"বাংলা সাহিত্যের মহাকবি।"},
+    ],
+    tags:["সুন্দরবন","বাঘ","চিংড়ি","মধু","ইউনেস্কো","শিল্প"],
+  },
+
+  rajshahi:{
+    name:"রাজশাহী",emoji:"🍈",div:"রাজশাহী",area:"২,৪০৭",pop:"৩৫ লক্ষ+",upazila:"৯",found:"১৭৭২",
+    banner:W+"8/84/Rajshahi_Collage.jpg/1200px-Rajshahi_Collage.jpg",
+    gallery:[
+      W+"5/52/Puthia_Temple_Rajshahi.jpg/640px-Puthia_Temple_Rajshahi.jpg",
+      W+"6/63/Rajshahi_University.jpg/640px-Rajshahi_University.jpg",
+      W+"3/3c/Padma_River_Rajshahi.jpg/640px-Padma_River_Rajshahi.jpg",
+    ],
+    history:`রাজশাহী উত্তর-পশ্চিম বাংলাদেশের প্রধান শহর। "আমের রাজধানী" ও "রেশমের শহর" হিসেবে বিশ্বখ্যাত। পদ্মা নদীর তীরে অবস্থিত এই শহর বাংলাদেশের সবচেয়ে পরিচ্ছন্ন শহরগুলোর একটি।\n\nপ্রাচীনকালে এই অঞ্চল "পুণ্ড্রবর্ধন" নামে পরিচিত ছিল। গুপ্ত ও পাল রাজবংশের সময় এটি শিক্ষা-সংস্কৃতির কেন্দ্র ছিল। নীলচাষের বিরুদ্ধে কৃষক বিদ্রোহও এখানে হয়েছিল।\n\nরাজশাহীর আম দেশের সেরা। ফজলি, ল্যাংড়া, গোপালভোগ, ক্ষীরসাপাতিসহ অসংখ্য প্রজাতির আম এখানে উৎপাদিত হয়। আমের মৌসুমে রাজশাহীর বাজার রঙিন হয়ে ওঠে।`,
+    places:[
+      {ico:"🏛️",nm:"বরেন্দ্র গবেষণা জাদুঘর",desc:"১৯১০ সালে প্রতিষ্ঠিত বাংলাদেশের প্রাচীনতম জাদুঘর। প্রাচীন নিদর্শনের অমূল্য সংগ্রহ।",img:""},
+      {ico:"🌊",nm:"পদ্মা নদীর তীর",desc:"বিকেলে পদ্মার পাড়ে বসে সূর্যাস্ত দেখা রাজশাহীর বিশেষ অভিজ্ঞতা।",img:W+"3/3c/Padma_River_Rajshahi.jpg/400px-Padma_River_Rajshahi.jpg"},
+      {ico:"⛩️",nm:"পুঠিয়া রাজবাড়ি ও মন্দির",desc:"১৮ শতকের ঐতিহাসিক জমিদারবাড়ি ও মন্দির কমপ্লেক্স।",img:W+"5/52/Puthia_Temple_Rajshahi.jpg/400px-Puthia_Temple_Rajshahi.jpg"},
+      {ico:"🎓",nm:"রাজশাহী বিশ্ববিদ্যালয়",desc:"১৯৫৩ সালে প্রতিষ্ঠিত। বিশাল সবুজ ক্যাম্পাস।",img:W+"6/63/Rajshahi_University.jpg/400px-Rajshahi_University.jpg"},
+    ],
+    foods:[
+      {ico:"🥭",nm:"ফজলি আম",desc:"রাজশাহীর সবচেয়ে বিখ্যাত আম। মিষ্টি ও রসালো।"},
+      {ico:"🥭",nm:"গোপালভোগ আম",desc:"সুগন্ধি ও অতি মিষ্টি।"},
+      {ico:"🧵",nm:"রাজশাহী সিল্ক",desc:"বিশ্বখ্যাত রেশম কাপড়।"},
+      {ico:"🍚",nm:"কালাই রুটি",desc:"ডাল বেটে তৈরি বিশেষ রুটি।"},
+    ],
+    persons:[
+      {ico:"📚",nm:"ড. মুহম্মদ শহীদুল্লাহ",role:"বাংলার বিখ্যাত ভাষাবিদ ও পণ্ডিত।"},
+      {ico:"🎓",nm:"ইলা মিত্র",role:"কৃষক আন্দোলনের নেত্রী।"},
+    ],
+    tags:["আম","রেশম","পদ্মা","শিক্ষা","ঐতিহাসিক","পরিষ্কার"],
+  },
+
+  barisal:{
+    name:"বরিশাল",emoji:"🚢",div:"বরিশাল",area:"২,৭৮৫",pop:"২২ লক্ষ+",upazila:"১০",found:"১৭৯৭",
+    banner:W+"7/74/Barisal_Launch_Terminal.jpg/1200px-Barisal_Launch_Terminal.jpg",
+    gallery:[
+      W+"1/11/Kuakata_beach_Bangladesh.jpg/640px-Kuakata_beach_Bangladesh.jpg",
+    ],
+    history:`বরিশাল দক্ষিণ বাংলাদেশের প্রধান শহর। "ভাটির দেশ" ও "প্রাচ্যের ভেনিস" নামে পরিচিত। অসংখ্য নদী, খাল ও বিলে ভরা এই জেলা নদীমাতৃক সংস্কৃতির পীঠস্থান।\n\nকীর্তনখোলা নদীর তীরে গড়ে ওঠা বরিশাল একসময় পাট ও নৌবাণিজ্যের কেন্দ্র ছিল। লঞ্চ যোগাযোগের জন্য বরিশাল সারাদেশে পরিচিত — ঢাকা থেকে রাতের লঞ্চে বরিশাল যাত্রা এক অনন্য অভিজ্ঞতা।\n\nকবি জীবনানন্দ দাশ, শেরে বাংলা এ কে ফজলুল হক, আব্বাসউদ্দিন আহমদ — সকলের জন্মভূমি এই বরিশাল।`,
+    places:[
+      {ico:"🚢",nm:"বরিশাল লঞ্চঘাট",desc:"বাংলাদেশের সবচেয়ে বড় লঞ্চ টার্মিনাল।",img:W+"7/74/Barisal_Launch_Terminal.jpg/400px-Barisal_Launch_Terminal.jpg"},
+      {ico:"🌊",nm:"কুয়াকাটা সমুদ্রসৈকত",desc:"সাগরকন্যা নামে পরিচিত। একই স্থান থেকে সূর্যোদয় ও সূর্যাস্ত দেখা যায়।",img:W+"1/11/Kuakata_beach_Bangladesh.jpg/400px-Kuakata_beach_Bangladesh.jpg"},
+      {ico:"🌿",nm:"দুর্গাসাগর",desc:"বরিশালের বৃহত্তম পুকুর। পরিযায়ী পাখির অভয়ারণ্য।",img:""},
+    ],
+    foods:[
+      {ico:"🐟",nm:"ইলিশ মাছ",desc:"বরিশালের ইলিশ সারাদেশে বিখ্যাত।"},
+      {ico:"🌾",nm:"আমড়া",desc:"বরিশালের আমড়া সারাদেশে রপ্তানি হয়।"},
+      {ico:"🍚",nm:"পান্তা ইলিশ",desc:"পান্তা ভাতের সাথে ইলিশ — বরিশালের বিশেষ স্বাদ।"},
+    ],
+    persons:[
+      {ico:"✍️",nm:"জীবনানন্দ দাশ",role:"বাংলা সাহিত্যের অন্যতম শ্রেষ্ঠ কবি।"},
+      {ico:"👨‍💼",nm:"শেরে বাংলা একে ফজলুল হক",role:"বাংলার বাঘ নামে খ্যাত রাজনীতিবিদ।"},
+      {ico:"🎵",nm:"আব্বাসউদ্দিন আহমদ",role:"পল্লীগানের কিংবদন্তি শিল্পী।"},
+    ],
+    tags:["নদী","লঞ্চ","ইলিশ","সাহিত্য","কুয়াকাটা","ভাটির দেশ"],
+  },
+
+  bogura:{
+    name:"বগুড়া",emoji:"🏛️",div:"রাজশাহী",area:"২,৯২০",pop:"৩৫ লক্ষ+",upazila:"১২",found:"১৮২১",
+    banner:W+"2/2a/Mahasthangarh.jpg/1200px-Mahasthangarh.jpg",
+    gallery:[
+      W+"5/5b/Mahasthangarh_ruins.jpg/640px-Mahasthangarh_ruins.jpg",
+    ],
+    history:`বগুড়া উত্তরবঙ্গের সবচেয়ে গুরুত্বপূর্ণ বাণিজ্যিক শহর। মহাস্থানগড় — বাংলাদেশের সবচেয়ে পুরনো প্রত্নতাত্ত্বিক নগরী — এই জেলায়।\n\nখ্রিস্টপূর্ব ৩য় শতাব্দী থেকে মৌর্য, গুপ্ত ও পাল আমলে মহাস্থানগড় "পুণ্ড্রনগর" নামে বাংলার রাজধানী ছিল। অশোকের আমলের শিলালিপি এখানে পাওয়া গেছে।\n\nবগুড়ার দই বিশ্বখ্যাত। "বগুড়ার দই" বাংলাদেশ ছাড়িয়ে বিদেশেও রপ্তানি হয়।`,
+    places:[
+      {ico:"🏛️",nm:"মহাস্থানগড়",desc:"বাংলাদেশের সবচেয়ে পুরনো প্রত্নস্থান। খ্রিস্টপূর্ব ৩য় শতাব্দীর নিদর্শন।",img:W+"2/2a/Mahasthangarh.jpg/400px-Mahasthangarh.jpg"},
+      {ico:"⛩️",nm:"গোকুল মেধ",desc:"মৌর্য আমলের বৌদ্ধ স্তূপের ধ্বংসাবশেষ।",img:""},
+    ],
+    foods:[
+      {ico:"🍮",nm:"বগুড়ার দই",desc:"বিশ্বখ্যাত মিষ্টি দই।"},
+      {ico:"🧁",nm:"দই মিষ্টান্ন",desc:"দই দিয়ে তৈরি বিভিন্ন মিষ্টি।"},
+    ],
+    persons:[
+      {ico:"👨‍💼",nm:"জেনারেল জিয়াউর রহমান",role:"মুক্তিযুদ্ধের বীর ও সাবেক রাষ্ট্রপতি।"},
+    ],
+    tags:["মহাস্থানগড়","প্রত্নতত্ত্ব","দই","ঐতিহাসিক","উত্তরবঙ্গ"],
+  },
+
+  naogaon:{
+    name:"নওগাঁ",emoji:"🏯",div:"রাজশাহী",area:"৩,৪৩৫",pop:"২৭ লক্ষ+",upazila:"১১",found:"১৯৮৪",
+    banner:W+"1/19/Somapura_Mahavihara.jpg/1200px-Somapura_Mahavihara.jpg",
+    gallery:[W+"4/4e/Paharpur_museum.jpg/640px-Paharpur_museum.jpg"],
+    history:`নওগাঁ জেলায় রয়েছে পাহাড়পুর বৌদ্ধবিহার বা সোমপুর মহাবিহার — দক্ষিণ এশিয়ার বৃহত্তম বৌদ্ধ মঠ ও ইউনেস্কো বিশ্ব ঐতিহ্যবাহী স্থান। পাল রাজা ধর্মপালের আমলে ৮ম শতাব্দীতে নির্মিত এই মহাবিহারে একসময় ১০,০০০ এরও বেশি ভিক্ষু থাকতেন। চীন, তিব্বত ও ভারত থেকে ছাত্ররা এখানে পড়তে আসতেন।`,
+    places:[
+      {ico:"🏯",nm:"পাহাড়পুর বৌদ্ধবিহার",desc:"ইউনেস্কো বিশ্ব ঐতিহ্যবাহী স্থান। ৮ম শতাব্দীর বৃহত্তম বৌদ্ধ মঠ।",img:W+"1/19/Somapura_Mahavihara.jpg/400px-Somapura_Mahavihara.jpg"},
+      {ico:"🕌",nm:"কুসুম্বা মসজিদ",desc:"সুলতানি আমলের ঐতিহাসিক মসজিদ।",img:""},
+    ],
+    foods:[
+      {ico:"🥭",nm:"বিভিন্ন প্রজাতির আম",desc:"চাঁপাইয়ের মতো উৎকৃষ্ট আম।"},
+      {ico:"🍚",nm:"চিনিগুঁড়া চাল",desc:"সুগন্ধি বিশেষ চাল।"},
+    ],
+    persons:[{ico:"📿",nm:"পাল রাজবংশ",role:"পাহাড়পুর মহাবিহারের পৃষ্ঠপোষক।"}],
+    tags:["ইউনেস্কো","বৌদ্ধ","প্রত্নতত্ত্ব","আম","ঐতিহাসিক"],
+  },
+
+  bagerhat:{
+    name:"বাগেরহাট",emoji:"🕌",div:"খুলনা",area:"৩,৯৫৯",pop:"১৭ লক্ষ+",upazila:"৯",found:"১৮৮২",
+    banner:W+"c/c2/Shait_Gambuj_Mosque%2C_Bagerhat.jpg/1200px-Shait_Gambuj_Mosque%2C_Bagerhat.jpg",
+    gallery:[W+"9/96/Sundarbans_Mangrove_forest.jpg/640px-Sundarbans_Mangrove_forest.jpg"],
+    history:`বাগেরহাট সুলতানি আমলের এক সমৃদ্ধ নগর সভ্যতার স্থান। হযরত খান জাহান আলী পঞ্চদশ শতাব্দীতে "খলিফাতাবাদ" নামে একটি ইসলামিক নগর প্রতিষ্ঠা করেন। ৩৬০টির বেশি মসজিদ ও দীঘি নির্মাণ করেছিলেন তিনি। ষাটগম্বুজ মসজিদ এই শহরের সেরা স্থাপত্য নিদর্শন।`,
+    places:[
+      {ico:"🕌",nm:"ষাটগম্বুজ মসজিদ",desc:"ইউনেস্কো বিশ্ব ঐতিহ্যবাহী স্থান। ৬০ স্তম্ভের উপর ৭৭ গম্বুজ।",img:W+"c/c2/Shait_Gambuj_Mosque%2C_Bagerhat.jpg/400px-Shait_Gambuj_Mosque%2C_Bagerhat.jpg"},
+      {ico:"🕌",nm:"খান জাহান আলীর মাজার",desc:"পবিত্র ওলির মাজার। পাশে বিশাল দীঘিতে কুমির।",img:""},
+    ],
+    foods:[
+      {ico:"🦐",nm:"বাগদা চিংড়ি",desc:"বড় বড় বাগদা চিংড়ি।"},
+      {ico:"🍯",nm:"সুন্দরবনের মধু",desc:"অনন্য স্বাদের প্রাকৃতিক মধু।"},
+    ],
+    persons:[{ico:"🕌",nm:"হযরত খান জাহান আলী",role:"বাগেরহাটের প্রতিষ্ঠাতা ও ইসলাম প্রচারক।"}],
+    tags:["ইউনেস্কো","মসজিদ","সুন্দরবন","ইসলামিক","ঐতিহাসিক"],
+  },
+
+  gopalganj:{
+    name:"গোপালগঞ্জ",emoji:"🏡",div:"ঢাকা",area:"১,৪৬৮",pop:"১২ লক্ষ+",upazila:"৫",found:"১৯৮৪",
+    banner:W+"3/3d/Tungipara_-_Bangabandhu%27s_Mausoleum.jpg/1200px-Tungipara_-_Bangabandhu%27s_Mausoleum.jpg",
+    gallery:[W+"5/56/Bangabandhu_Birthplace_Tungipara.jpg/640px-Bangabandhu_Birthplace_Tungipara.jpg"],
+    history:`গোপালগঞ্জ বাংলাদেশের ইতিহাসে এক বিশেষ স্থান ধারণ করে। জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমান ১৯২০ সালের ১৭ মার্চ এই জেলার টুঙ্গিপাড়ায় জন্মগ্রহণ করেন। তাঁর সমাধিসৌধও এখানে। মধুমতি-ঘাঘর নদীবেষ্টিত এই জেলায় মিষ্টি পানির মাছের প্রাচুর্য রয়েছে।`,
+    places:[
+      {ico:"🏛️",nm:"বঙ্গবন্ধু স্মৃতি কমপ্লেক্স, টুঙ্গিপাড়া",desc:"জাতির পিতার সমাধিসৌধ, জাদুঘর ও বসতবাড়ি।",img:W+"3/3d/Tungipara_-_Bangabandhu%27s_Mausoleum.jpg/400px-Tungipara_-_Bangabandhu%27s_Mausoleum.jpg"},
+    ],
+    foods:[
+      {ico:"🐟",nm:"রুই-কাতলা মাছ",desc:"বিলের তাজা মিষ্টি পানির মাছ।"},
+      {ico:"🥥",nm:"নারিকেল ও সুপারি",desc:"প্রচুর নারিকেল-সুপারির বাগান।"},
+    ],
+    persons:[{ico:"🌟",nm:"বঙ্গবন্ধু শেখ মুজিবুর রহমান",role:"স্বাধীন বাংলাদেশের স্থপতি ও জাতির পিতা।"}],
+    tags:["বঙ্গবন্ধু","মুক্তিযুদ্ধ","নদী","মাছ","রাজনীতি"],
+  },
+
+  sunamganj:{
+    name:"সুনামগঞ্জ",emoji:"💧",div:"সিলেট",area:"৩,৬৭১",pop:"২৫ লক্ষ+",upazila:"১২",found:"১৯৮৪",
+    banner:W+"1/13/Tanguar_haor_Sunamganj.jpg/1200px-Tanguar_haor_Sunamganj.jpg",
+    gallery:[W+"8/8c/Haor_Bangladesh_birds.jpg/640px-Haor_Bangladesh_birds.jpg"],
+    history:`সুনামগঞ্জ হাওরের দেশ। বর্ষাকালে এই জেলার বিশাল অংশ পানিতে ডুবে যায় এবং মনে হয় এক অপার নীল জলের সমুদ্র। টাঙ্গুয়ার হাওর বাংলাদেশের দ্বিতীয় রামসার স্থান। হাসন রাজার জন্মস্থান এই জেলায়। নীলাদ্রি লেক ও যাদুকাটা নদী পর্যটকদের মুগ্ধ করে।`,
+    places:[
+      {ico:"💧",nm:"টাঙ্গুয়ার হাওর",desc:"রামসার স্থান, পরিযায়ী পাখির অভয়ারণ্য।",img:W+"1/13/Tanguar_haor_Sunamganj.jpg/400px-Tanguar_haor_Sunamganj.jpg"},
+      {ico:"🌊",nm:"নীলাদ্রি লেক",desc:"স্বচ্ছ নীল পানির হ্রদ।",img:""},
+      {ico:"🏔️",nm:"যাদুকাটা নদী",desc:"পাথর ও পাহাড়ের মিলনে অপূর্ব দৃশ্য।",img:""},
+    ],
+    foods:[
+      {ico:"🐟",nm:"হাওরের দেশীয় মাছ",desc:"হাওরের বিশেষ মাছ — শিং, মাগুর, বোয়াল।"},
+      {ico:"🌾",nm:"হাওরের চাল",desc:"হাওর অঞ্চলের বিশেষ ধানের চাল।"},
+    ],
+    persons:[{ico:"🎵",nm:"হাসন রাজা",role:"মরমী কবি ও বাউল সংগীতের কিংবদন্তি।"}],
+    tags:["হাওর","রামসার","পাখি","বাউল","প্রকৃতি","নীলাদ্রি"],
+  },
+
+  kushtia:{
+    name:"কুষ্টিয়া",emoji:"🎶",div:"খুলনা",area:"১,৬২১",pop:"২০ লক্ষ+",upazila:"৬",found:"১৮৬৩",
+    banner:W+"0/07/Lalon_Shah_Mazar_Kushtia.jpg/1200px-Lalon_Shah_Mazar_Kushtia.jpg",
+    gallery:[
+      W+"e/ed/Shilaidaha_Kuthibari.jpg/640px-Shilaidaha_Kuthibari.jpg",
+      W+"5/57/Lalon_festival_Kushtia.jpg/640px-Lalon_festival_Kushtia.jpg",
+    ],
+    history:`কুষ্টিয়া বাংলাদেশের সাংস্কৃতিক ঐতিহ্যের এক অনন্য ভান্ডার। মহাত্মা লালন সাঁইজির তীর্থভূমি এই কুষ্টিয়া। লালনের ছেউড়িয়া আখড়ায় প্রতি বছর লাখো ভক্ত আসেন।\n\nবিশ্বকবি রবীন্দ্রনাথ ঠাকুরের শিলাইদহ কুঠিবাড়ি এখানে। তিনি এখানে জমিদারি করতে এসে পদ্মার তীরে নৌকায় বসে গীতাঞ্জলি-র অনেক কবিতা লিখেছিলেন।\n\nহার্ডিঞ্জ ব্রিজ — পদ্মার উপর ব্রিটিশ আমলের ঐতিহাসিক রেলসেতু — কুষ্টিয়ার অন্যতম দ্রষ্টব্য।`,
+    places:[
+      {ico:"🎶",nm:"লালন মাজার ও আখড়া",desc:"বাউল দর্শনের কেন্দ্রবিন্দু। প্রতি বছর দোল ও কার্তিক পূর্ণিমায় উৎসব।",img:W+"0/07/Lalon_Shah_Mazar_Kushtia.jpg/400px-Lalon_Shah_Mazar_Kushtia.jpg"},
+      {ico:"🏡",nm:"শিলাইদহ রবীন্দ্র কুঠিবাড়ি",desc:"বিশ্বকবির জমিদারি বাড়ি ও জাদুঘর।",img:W+"e/ed/Shilaidaha_Kuthibari.jpg/400px-Shilaidaha_Kuthibari.jpg"},
+      {ico:"🌉",nm:"হার্ডিঞ্জ ব্রিজ",desc:"পদ্মার উপর ব্রিটিশ আমলের ঐতিহাসিক রেলসেতু।",img:""},
+    ],
+    foods:[
+      {ico:"🌾",nm:"তিলের খাজা",desc:"তিল দিয়ে তৈরি ঐতিহ্যবাহী মিষ্টি।"},
+      {ico:"🍚",nm:"পান্তা ভাত",desc:"লালন মেলায় পান্তা ভাতের বিশেষ আয়োজন।"},
+    ],
+    persons:[
+      {ico:"🎶",nm:"ফকির লালন সাঁই",role:"বাউল দর্শনের মহাসাধক ও মানবতাবাদী কবি।"},
+      {ico:"✍️",nm:"রবীন্দ্রনাথ ঠাকুর",role:"বিশ্বকবি, শিলাইদহে বহু বছর জমিদারি করেছেন।"},
+      {ico:"🎵",nm:"মীর মোশাররফ হোসেন",role:"বিষাদসিন্ধুর লেখক।"},
+    ],
+    tags:["লালন","রবীন্দ্রনাথ","বাউল","পদ্মা","সংগীত","সাহিত্য"],
+  },
+
+  dinajpur:{
+    name:"দিনাজপুর",emoji:"🍚",div:"রংপুর",area:"৩,৪৩৭",pop:"৩০ লক্ষ+",upazila:"১৩",found:"১৭৮৬",
+    banner:W+"9/98/Kantajew_Temple_Dinajpur_Bangladesh.jpg/1200px-Kantajew_Temple_Dinajpur_Bangladesh.jpg",
+    gallery:[W+"5/58/Ramsagar_Dinajpur.jpg/640px-Ramsagar_Dinajpur.jpg"],
+    history:`দিনাজপুর উত্তরবঙ্গের একটি প্রাচীন ঐতিহাসিক জেলা। কান্তজিউ মন্দির মুঘল ও বাংলা স্থাপত্যের অনন্য সংমিশ্রণ। মহারাজা প্রাণনাথ ১৮ শতকে এটি নির্মাণ করেছিলেন। রামসাগর — বাংলাদেশের বৃহত্তম মানবনির্মিত দীঘি — রাজা রামনাথ খনন করেছিলেন। দিনাজপুরের কালো জিরা চাল বিশ্বখ্যাত।`,
+    places:[
+      {ico:"⛩️",nm:"কান্তজিউ মন্দির",desc:"১৮ শতকের টেরাকোটা মন্দির। পোড়ামাটির ফলকে পৌরাণিক কাহিনি।",img:W+"9/98/Kantajew_Temple_Dinajpur_Bangladesh.jpg/400px-Kantajew_Temple_Dinajpur_Bangladesh.jpg"},
+      {ico:"🌊",nm:"রামসাগর জাতীয় উদ্যান",desc:"বৃহত্তম মানবনির্মিত দীঘি। পাখির অভয়ারণ্য।",img:W+"5/58/Ramsagar_Dinajpur.jpg/400px-Ramsagar_Dinajpur.jpg"},
+    ],
+    foods:[
+      {ico:"🍚",nm:"কালো জিরা চাল",desc:"বিশ্বখ্যাত সুগন্ধি চাল।"},
+      {ico:"🥭",nm:"হাঁড়িভাঙা আম",desc:"দিনাজপুরের বিশেষ আম জাত।"},
+    ],
+    persons:[{ico:"🏯",nm:"মহারাজা প্রাণনাথ",role:"কান্তজিউ মন্দিরের পৃষ্ঠপোষক রাজা।"}],
+    tags:["মন্দির","চাল","আম","ঐতিহাসিক","উত্তরবঙ্গ"],
+  },
+
+  rangpur:{
+    name:"রংপুর",emoji:"🌶️",div:"রংপুর",area:"২,৩০৮",pop:"২৮ লক্ষ+",upazila:"৮",found:"১৭৬৯",
+    banner:W+"d/d7/Tajhat_Palace_Rangpur.jpg/1200px-Tajhat_Palace_Rangpur.jpg",
+    gallery:[],
+    history:`রংপুর উত্তরবঙ্গের প্রধান শহর ও রংপুর বিভাগের সদর দফতর। বেগম রোকেয়ার জন্মস্থান পায়রাবন্দ এই জেলায়। নারী জাগরণের এই পথিকৃৎ নারী শিক্ষার জন্য সারাজীবন লড়েছেন। তাজহাট জমিদারবাড়ি রংপুরের ঐতিহাসিক স্থাপত্যের অন্যতম নিদর্শন। শীতকালে রংপুর বাংলাদেশের অন্যতম ঠান্ডা জেলা।`,
+    places:[
+      {ico:"🏰",nm:"তাজহাট জমিদারবাড়ি",desc:"ঐতিহাসিক জমিদারবাড়ি, এখন জাদুঘর। মার্বেল পাথরের অনন্য স্থাপত্য।",img:W+"d/d7/Tajhat_Palace_Rangpur.jpg/400px-Tajhat_Palace_Rangpur.jpg"},
+      {ico:"🌿",nm:"বেগম রোকেয়া স্মৃতিকেন্দ্র",desc:"নারী মুক্তি আন্দোলনের পথিকৃতের স্মরণে নির্মিত।",img:""},
+    ],
+    foods:[
+      {ico:"🌶️",nm:"শুঁটকি মাছ",desc:"রংপুরের বিশেষ শুঁটকি রান্না।"},
+      {ico:"🍚",nm:"চিড়া ও মুড়ি",desc:"রংপুরের চিড়া-মুড়ি বিখ্যাত।"},
+    ],
+    persons:[{ico:"👩‍🏫",nm:"বেগম রোকেয়া",role:"নারী জাগরণের পথিকৃৎ, লেখক ও সমাজ সংস্কারক।"}],
+    tags:["নারীমুক্তি","শিক্ষা","ঐতিহাসিক","তিস্তা","উত্তরবঙ্গ"],
+  },
+
+  mymensingh:{
+    name:"ময়মনসিংহ",emoji:"🎓",div:"ময়মনসিংহ",area:"৪,৩৬৩",pop:"৫০ লক্ষ+",upazila:"১৩",found:"১৭৮৭",
+    banner:W+"8/88/Bangladesh_Agricultural_University.jpg/1200px-Bangladesh_Agricultural_University.jpg",
+    gallery:[W+"5/5e/Shoshi_lodge_Mymensingh.jpg/640px-Shoshi_lodge_Mymensingh.jpg"],
+    history:`ময়মনসিংহ বাংলাদেশের অষ্টম বিভাগের সদর দফতর। ব্রহ্মপুত্র নদীর তীরে অবস্থিত এই শহর শিক্ষা ও সংস্কৃতির কেন্দ্র। বাংলাদেশ কৃষি বিশ্ববিদ্যালয় দেশের কৃষি গবেষণার শীর্ষ প্রতিষ্ঠান। ময়মনসিংহ গীতিকা — বাংলার লোকসাহিত্যের অমূল্য সংগ্রহ — এই অঞ্চলের সম্পদ। মুক্তাগাছার মণ্ডা বাংলাদেশের সবচেয়ে বিখ্যাত মিষ্টিগুলোর একটি।`,
+    places:[
+      {ico:"🎓",nm:"বাংলাদেশ কৃষি বিশ্ববিদ্যালয়",desc:"দেশের সেরা কৃষি বিশ্ববিদ্যালয়। বিশাল সবুজ ক্যাম্পাস।",img:W+"8/88/Bangladesh_Agricultural_University.jpg/400px-Bangladesh_Agricultural_University.jpg"},
+      {ico:"🏛️",nm:"শশী লজ",desc:"ঐতিহাসিক জমিদারবাড়ি। মহারাজা শশীকান্ত আচার্যের বাসস্থান।",img:W+"5/5e/Shoshi_lodge_Mymensingh.jpg/400px-Shoshi_lodge_Mymensingh.jpg"},
+    ],
+    foods:[
+      {ico:"🍮",nm:"মুক্তাগাছার মণ্ডা",desc:"বিশ্বখ্যাত মিষ্টি। ১৮শ শতক থেকে বিখ্যাত।"},
+      {ico:"🐟",nm:"ব্রহ্মপুত্রের মাছ",desc:"নদীর তাজা মাছ।"},
+    ],
+    persons:[
+      {ico:"🎵",nm:"কাজী নজরুল ইসলাম",role:"বাংলাদেশের জাতীয় কবি, 'বিদ্রোহী কবি'।"},
+      {ico:"📚",nm:"চন্দ্রকুমার দে",role:"ময়মনসিংহ গীতিকার সংগ্রাহক।"},
+    ],
+    tags:["শিক্ষা","লোকসাহিত্য","কৃষি","মণ্ডা","ব্রহ্মপুত্র"],
+  },
+};
+
+/* ── বাকি জেলাগুলোর জন্য ডিফল্ট ডেটা ── */
+const DEFAULTS = {
+  gazipur:{name:"গাজীপুর",emoji:"🏭",div:"ঢাকা",area:"১,৭৪১",pop:"৩৫ লক্ষ+",upazila:"৫",found:"১৯৮৪",banner:W+"2/2a/Bhawal_National_Park.jpg/1200px-Bhawal_National_Park.jpg",gallery:[],history:"গাজীপুর শিল্প ও বনের জেলা। বঙ্গবন্ধু শেখ মুজিব সাফারি পার্ক ও ভাওয়াল জাতীয় উদ্যান এই জেলার গর্ব। বাংলাদেশের সবচেয়ে বড় শিল্পাঞ্চলগুলোর একটি। প্রায় ২,০০০-এর বেশি কারখানা রয়েছে এই জেলায়।",places:[{ico:"🌲",nm:"ভাওয়াল জাতীয় উদ্যান",desc:"ঢাকার কাছে বিশাল শালবন।",img:""},{ico:"🐅",nm:"বঙ্গবন্ধু সাফারি পার্ক",desc:"বাংলাদেশের প্রথম সাফারি পার্ক।",img:W+"2/2a/Bhawal_National_Park.jpg/400px-Bhawal_National_Park.jpg"}],foods:[{ico:"🍚",nm:"ভাত ও মাছ",desc:"গাজীপুরের ঐতিহ্যবাহী খাবার।"}],persons:[{ico:"🏭",nm:"শিল্পউদ্যোক্তারা",role:"দেশের সবচেয়ে বড় শিল্পনগরীর প্রতিষ্ঠাতারা।"}],tags:["শিল্প","বন","সাফারি","পোশাক"]},
+  narayanganj:{name:"নারায়ণগঞ্জ",emoji:"⚓",div:"ঢাকা",area:"৬৮৩",pop:"৩০ লক্ষ+",upazila:"৫",found:"১৯৮৪",banner:W+"7/7a/Sonargaon_Bangladesh.jpg/1200px-Sonargaon_Bangladesh.jpg",gallery:[],history:"নারায়ণগঞ্জ প্রাচীন বন্দরনগরী। শীতলক্ষ্যার তীরে পাট ও পোশাক শিল্পের বিশাল কেন্দ্র। সোনারগাঁও লোকশিল্প জাদুঘর বাংলার ঐতিহ্য সংরক্ষণ করে। পানাম নগর প্রাচীন বাংলার এক অনন্য স্থাপত্য নিদর্শন।",places:[{ico:"🏛️",nm:"সোনারগাঁও লোকশিল্প জাদুঘর",desc:"বাংলার লোকশিল্পের সবচেয়ে বড় সংগ্রহ।",img:W+"7/7a/Sonargaon_Bangladesh.jpg/400px-Sonargaon_Bangladesh.jpg"},{ico:"🏘️",nm:"পানাম নগর",desc:"প্রাচীন বাংলার ঐতিহাসিক নগর।",img:""}],foods:[{ico:"🧵",nm:"মসলিন কাপড়",desc:"নারায়ণগঞ্জের ঐতিহ্যবাহী বস্ত্র।"}],persons:[{ico:"⚓",nm:"ইসলাম খান",role:"মুঘল সুবাদার, শীতলক্ষ্যার তীরে প্রশাসনিক কেন্দ্র স্থাপন করেন।"}],tags:["বন্দর","পাট","শিল্প","সোনারগাঁও","মুঘল"]},
+};
+
+function getDistrict(id){
+  return DB[id] || DEFAULTS[id] || null;
+}
+
+function render(d){
+  document.title=`${d.name} জেলা — জেলা.পাতা.বাংলা`;
+  const histParas = d.history.split('\n\n').filter(Boolean).map(p=>`<p>${p}</p>`).join('');
+  const placesHTML = d.places.map(p=>`
+    <div class="pc">
+      ${p.img?`<img class="pc-img" src="${p.img}" alt="${p.nm}" onerror="this.style.display='none'">`:`<div class="pico">${p.ico}</div>`}
+      <div class="pname">${p.nm}</div>
+      <div class="pdesc">${p.desc}</div>
+    </div>`).join('');
+  const foodsHTML = d.foods.map(f=>`
+    <div class="fc">
+      <div class="ficon">${f.ico}</div>
+      <div class="fname">${f.nm}</div>
+      <div class="fdesc">${f.desc}</div>
+    </div>`).join('');
+  const personsHTML = d.persons.map(p=>`
+    <div class="pcard">
+      <div class="pav">${p.ico}</div>
+      <div><div class="pname2">${p.nm}</div><div class="prole">${p.role}</div></div>
+    </div>`).join('');
+  const tagsHTML = (d.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
+  const galleryHTML = (d.gallery||[]).map(src=>`<img src="${src}" alt="${d.name}" loading="lazy" onerror="this.style.display='none'">`).join('');
+
+  document.getElementById('root').innerHTML=`
+    <!-- BANNER -->
+    <div class="banner">
+      <img class="banner-img" src="${d.banner}" alt="${d.name}" onerror="this.style.display='none'">
+      <div class="banner-grad"></div>
+      <div class="banner-content">
+        <div class="bmax">
+          <div class="bbadge">📍 ${d.div} বিভাগ</div>
+          <h1 class="btitle">${d.name} ${d.emoji}</h1>
+          <p class="bsub">বাংলাদেশের গর্বিত একটি জেলার সম্পূর্ণ পরিচয়</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    ${galleryHTML?`<div class="gallery">${galleryHTML}</div>`:''}
+
+    <!-- STATS -->
+    <div class="sbar">
+      <div class="sbar-in">
+        <div class="si"><span class="sin">${d.area}</span><span class="sil">আয়তন (বর্গকিমি)</span></div>
+        <div class="si"><span class="sin">${d.pop}</span><span class="sil">জনসংখ্যা</span></div>
+        <div class="si"><span class="sin">${d.upazila}টি</span><span class="sil">উপজেলা</span></div>
+        <div class="si"><span class="sin">${d.div}</span><span class="sil">বিভাগ</span></div>
+        <div class="si"><span class="sin">${d.found}</span><span class="sil">প্রতিষ্ঠা</span></div>
+      </div>
+    </div>
+
+    <!-- AD: Rectangle after stats -->
+    <div class="ad-rect-wrap">
+      <div class="ad-rect">
+        <span class="ad-lbl">বিজ্ঞাপন</span>
+        <div id="ad-rect-1" data-ad-slot="district-rect" data-ad-size="300x250" data-ad-type="mkx"></div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="wrap">
+      <div class="main-col">
+        <!-- ইতিহাস -->
+        <div class="sec">
+          <div class="sh"><div class="sico">📜</div><div class="stl">ইতিহাস ও পরিচিতি</div></div>
+          <div class="sbody">${histParas}</div>
+        </div>
+
+        <!-- জনপ্রিয় স্থান -->
+        <div class="sec">
+          <div class="sh"><div class="sico">🗺️</div><div class="stl">জনপ্রিয় স্থানসমূহ</div></div>
+          <div class="pgrid">${placesHTML}</div>
+        </div>
+
+        <!-- AD mid-content -->
+        <div class="sec" style="padding:12px;text-align:center;min-height:110px;">
+          <span class="ad-lbl">বিজ্ঞাপন</span>
+          <div id="ad-mid-content" data-ad-slot="content-mid" data-ad-size="728x90" data-ad-type="banner"></div>
+        </div>
+
+        <!-- বিখ্যাত খাবার -->
+        <div class="sec">
+          <div class="sh"><div class="sico">🍽️</div><div class="stl">বিখ্যাত খাবার</div></div>
+          <div class="fgrid">${foodsHTML}</div>
+        </div>
+
+        <!-- বিখ্যাত ব্যক্তিত্ব -->
+        <div class="sec">
+          <div class="sh"><div class="sico">🌟</div><div class="stl">বিখ্যাত ব্যক্তিত্ব</div></div>
+          <div class="plist">${personsHTML}</div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <!-- Quick Info -->
+        <div class="sbc">
+          <div class="sbt">📋 সংক্ষিপ্ত তথ্য</div>
+          <div class="sbr"><span class="sbk">জেলার নাম</span><span class="sbv">${d.name}</span></div>
+          <div class="sbr"><span class="sbk">বিভাগ</span><span class="sbv">${d.div}</span></div>
+          <div class="sbr"><span class="sbk">আয়তন</span><span class="sbv">${d.area} বর্গকিমি</span></div>
+          <div class="sbr"><span class="sbk">জনসংখ্যা</span><span class="sbv">${d.pop}</span></div>
+          <div class="sbr"><span class="sbk">উপজেলা</span><span class="sbv">${d.upazila}টি</span></div>
+          <div class="sbr"><span class="sbk">প্রতিষ্ঠা</span><span class="sbv">${d.found}</span></div>
+        </div>
+
+        <!-- AD: Sidebar 300x250 MKX -->
+        <div class="ad-side">
+          <span class="ad-lbl">বিজ্ঞাপন</span>
+          <div id="ad-side-1" data-ad-slot="sidebar-box" data-ad-size="300x250" data-ad-type="mkx"></div>
+        </div>
+
+        <!-- Tags -->
+        ${tagsHTML?`<div class="sbc"><div class="sbt">🏷️ ট্যাগসমূহ</div><div class="tags">${tagsHTML}</div></div>`:''}
+
+        <!-- AD: Sidebar second -->
+        <div class="ad-side">
+          <span class="ad-lbl">বিজ্ঞাপন</span>
+          <div id="ad-side-2" data-ad-slot="sidebar-box-2" data-ad-size="300x600" data-ad-type="banner"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <div class="bnav">
+      <a href="index.html" class="nb">← <strong>সব জেলা দেখুন</strong></a>
+    </div>
+  `;
+}
+
+function notFound(){
+  document.getElementById('root').innerHTML=`
+    <div style="text-align:center;padding:80px 20px;color:#4e6358">
+      <div style="font-size:3rem;margin-bottom:16px">🗺️</div>
+      <h2 style="font-family:'Noto Serif Bengali',serif;color:#0b5c2e;margin-bottom:8px">জেলা পাওয়া যায়নি</h2>
+      <p>এই জেলার তথ্য শীঘ্রই যোগ করা হবে।</p>
+      <a href="index.html" style="display:inline-block;margin-top:20px;padding:10px 24px;background:#0b5c2e;color:#fff;border-radius:20px;text-decoration:none;">← সব জেলায় ফিরুন</a>
+    </div>`;
+}
+
+const id = new URLSearchParams(location.search).get('id');
+const data = id ? getDistrict(id) : null;
+data ? render(data) : notFound();
+</script>
+</body>
+</html>
