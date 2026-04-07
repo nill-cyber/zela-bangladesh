@@ -44,11 +44,6 @@ header{
 }
 .srch input{background:none;border:none;outline:none;color:#fff;font-family:var(--font-body);font-size:.95rem;width:100%;}
 .srch input::placeholder{color:rgba(255,255,255,.5);}
-
-/* ── AD LEADERBOARD TOP ── */
-.ad-leader{background:#fff;border-bottom:1px solid var(--border);text-align:center;padding:8px 10px;min-height:62px;overflow:hidden;}
-.ad-lbl{font-size:.62rem;color:#c0c0c0;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
-
 /* ── HERO ── */
 .hero{
   background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 45%,var(--green2) 100%);
@@ -77,10 +72,7 @@ header{
 main{max-width:1300px;margin:0 auto;padding:26px 20px 60px;}
 .stitle{font-family:var(--font-display);font-size:1.16rem;color:var(--green);font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
 .stitle::after{content:'';flex:1;height:1px;background:var(--border);}
-
-/* ── AD MID RECTANGLE ── */
-.ad-rect{background:#fff;border:1px solid var(--border);border-radius:10px;text-align:center;padding:10px;margin:0 0 24px;min-height:100px;overflow:hidden;}
-
+  
 /* ── GRID ── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:20px;}
 .card{background:#fff;border-radius:12px;border:1px solid var(--border);box-shadow:var(--sh);cursor:pointer;transition:transform .22s,box-shadow .22s;text-decoration:none;color:inherit;display:block;overflow:hidden;}
@@ -96,9 +88,6 @@ main{max-width:1300px;margin:0 auto;padding:26px 20px 60px;}
 .cfoot{margin-top:10px;padding-top:10px;border-top:1px solid var(--green-pale);display:flex;align-items:center;justify-content:space-between;}
 .clink{font-size:.79rem;color:var(--green);font-weight:600;}
 .no-res{text-align:center;padding:60px 20px;color:var(--muted);display:none;}
-
-/* ── AD SIDEBAR (if needed) ── */
-.ad-inline{background:#fff;border:1px solid var(--border);border-radius:10px;text-align:center;padding:10px;margin:28px 0 0;min-height:90px;overflow:hidden;}
 
 /* ── FOOTER ── */
 footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:rgba(255,255,255,.78);text-align:center;padding:28px 20px;font-size:.84rem;}
@@ -134,12 +123,6 @@ footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:r
   </div>
 </header>
 
-<!-- AD: MKX / Banner Leaderboard (728x90) -->
-<div class="ad-leader">
-  <span class="ad-lbl">বিজ্ঞাপন</span>
-  <div id="ad-banner-top" data-ad-slot="leaderboard-top" data-ad-size="728x90" data-ad-type="banner"></div>
-</div>
-
 <section class="hero">
   <div class="hero-glow"></div>
   <h1 class="htitle">🗺️ বাংলাদেশের সকল জেলা</h1>
@@ -169,12 +152,6 @@ footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:r
 <main>
   <div class="stitle" id="stitle">সকল ৬৪টি জেলা</div>
 
-  <!-- AD: MKX Rectangle (300x250) -->
-  <div class="ad-rect">
-    <span class="ad-lbl">বিজ্ঞাপন</span>
-    <div id="ad-banner-mid" data-ad-slot="rectangle-mid" data-ad-size="300x250" data-ad-type="mkx"></div>
-  </div>
-
   <div class="grid" id="grid"></div>
   <div class="no-res" id="nr">
     <div style="font-size:2.8rem;margin-bottom:12px">🔍</div>
@@ -191,12 +168,7 @@ footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:r
 <footer>
   <span class="flogo">জেলা.পাতা.বাংলা</span>
   <p>বাংলাদেশের ৬৪ জেলার সম্পূর্ণ তথ্যভান্ডার · সকল তথ্য বাংলায়</p>
-  <div class="foot-ad">
-    <span class="ad-lbl">বিজ্ঞাপন</span>
-    <div id="ad-banner-footer" data-ad-slot="footer-leaderboard" data-ad-size="728x90" data-ad-type="banner"></div>
-  </div>
-  <p style="margin-top:10px;font-size:.76rem;color:rgba(255,255,255,.45)">© ২০২৫ জেলা.পাতা.বাংলা · সর্বস্বত্ব সংরক্ষিত</p>
-</footer>
+    
 
 <script>
 /* ============================================================
