@@ -7,10 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- ======= ADS.JS — MKX / BANNER / POPUNDER / SMARTLINK ======= -->
-<script src="ads.js"></script>
-<div id="ad-popunder" data-ad-type="popunder" style="display:none"></div>
-<div id="ad-smartlink" data-ad-type="smartlink" style="display:none"></div>
 
 <style>
 :root{
@@ -31,10 +27,6 @@ header{background:linear-gradient(100deg,var(--green-dark),var(--green));color:#
 .back{color:#fff;text-decoration:none;font-size:.87rem;background:rgba(255,255,255,.15);padding:7px 16px;border-radius:20px;transition:background .2s;white-space:nowrap;}
 .back:hover{background:rgba(255,255,255,.26);}
 .hlogo{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:#fff;text-decoration:none;}
-
-/* AD LEADERBOARD */
-.ad-leader{background:#fff;border-bottom:1px solid var(--border);text-align:center;padding:8px 10px;min-height:62px;overflow:hidden;}
-.ad-lbl{font-size:.62rem;color:#c0c0c0;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em;}
 
 /* BANNER */
 .banner{position:relative;height:400px;overflow:hidden;background:linear-gradient(135deg,var(--green-dark),var(--green2));}
@@ -59,10 +51,6 @@ header{background:linear-gradient(100deg,var(--green-dark),var(--green));color:#
 .si:last-child{border-right:none;}
 .sin{font-family:var(--fd);font-size:1.12rem;font-weight:700;color:var(--green);display:block;}
 .sil{font-size:.7rem;color:var(--muted);}
-
-/* AD after stats */
-.ad-rect{background:#fff;border:1px solid var(--border);text-align:center;padding:10px;min-height:100px;overflow:hidden;}
-.ad-rect-wrap{max-width:980px;margin:0 auto;padding:12px 20px;}
 
 /* CONTENT GRID */
 .wrap{max-width:980px;margin:0 auto;padding:24px 20px 60px;display:grid;grid-template-columns:1fr 290px;gap:24px;}
@@ -117,9 +105,6 @@ header{background:linear-gradient(100deg,var(--green-dark),var(--green));color:#
 .nb:hover{border-color:var(--green);color:var(--green);}
 .nb strong{display:block;font-family:var(--fd);font-size:1rem;color:var(--text);}
 
-/* AD BOTTOM */
-.ad-bottom-wrap{max-width:980px;margin:0 auto;padding:0 20px 20px;}
-.ad-bottom{background:#fff;border:1px solid var(--border);border-radius:10px;text-align:center;padding:10px;min-height:100px;overflow:hidden;}
 
 footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:rgba(255,255,255,.78);text-align:center;padding:24px 20px;font-size:.84rem;}
 .flogo2{font-family:var(--fd);color:#fff;font-size:1.1rem;display:block;margin-bottom:5px;}
@@ -141,30 +126,9 @@ footer{background:linear-gradient(100deg,var(--green-dark),var(--green));color:r
   <a href="index.html" class="hlogo">জেলা.পাতা.বাংলা</a>
 </header>
 
-<!-- AD: Leaderboard Top -->
-<div class="ad-leader">
-  <span class="ad-lbl">বিজ্ঞাপন</span>
-  <div id="ad-top" data-ad-slot="district-top-leader" data-ad-size="728x90" data-ad-type="banner"></div>
-</div>
-
-<div id="root"></div>
-
-<!-- AD: Bottom Banner -->
-<div class="ad-bottom-wrap">
-  <div class="ad-bottom">
-    <span class="ad-lbl">বিজ্ঞাপন</span>
-    <div id="ad-bottom-banner" data-ad-slot="district-bottom" data-ad-size="728x90" data-ad-type="mkx"></div>
-  </div>
-</div>
-
 <footer>
   <span class="flogo2">জেলা.পাতা.বাংলা</span>
   <p>বাংলাদেশের ৬৪ জেলার সম্পূর্ণ তথ্যভান্ডার · সকল তথ্য বাংলায়</p>
-  <div class="fad">
-    <span class="ad-lbl">বিজ্ঞাপন</span>
-    <div id="ad-footer" data-ad-slot="district-footer-leader" data-ad-size="728x90" data-ad-type="banner"></div>
-  </div>
-</footer>
 
 <script>
 /* =================================================================
@@ -636,14 +600,6 @@ function render(d){
       </div>
     </div>
 
-    <!-- AD: Rectangle after stats -->
-    <div class="ad-rect-wrap">
-      <div class="ad-rect">
-        <span class="ad-lbl">বিজ্ঞাপন</span>
-        <div id="ad-rect-1" data-ad-slot="district-rect" data-ad-size="300x250" data-ad-type="mkx"></div>
-      </div>
-    </div>
-
     <!-- CONTENT -->
     <div class="wrap">
       <div class="main-col">
@@ -657,12 +613,6 @@ function render(d){
         <div class="sec">
           <div class="sh"><div class="sico">🗺️</div><div class="stl">জনপ্রিয় স্থানসমূহ</div></div>
           <div class="pgrid">${placesHTML}</div>
-        </div>
-
-        <!-- AD mid-content -->
-        <div class="sec" style="padding:12px;text-align:center;min-height:110px;">
-          <span class="ad-lbl">বিজ্ঞাপন</span>
-          <div id="ad-mid-content" data-ad-slot="content-mid" data-ad-size="728x90" data-ad-type="banner"></div>
         </div>
 
         <!-- বিখ্যাত খাবার -->
